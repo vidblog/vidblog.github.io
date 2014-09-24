@@ -4,15 +4,15 @@
   
   
   <url>
-    <loc>http://vidblog.github.io/blog/archives/</loc>
-    <lastmod>2014-09-24T18:21:35-03:00</lastmod>
+    <loc>http://vid.blog.br/blog/archives/</loc>
+    <lastmod>2014-09-24T19:01:41-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://vidblog.github.io/</loc>
-    <lastmod>2014-09-24T18:21:35-03:00</lastmod>
+    <loc>http://vid.blog.br/</loc>
+    <lastmod>2014-09-24T19:01:41-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
