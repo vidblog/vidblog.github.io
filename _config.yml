@@ -2,7 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://vidblog.github.io
+url: http://vid.blog.br
+vid.blog.br
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: Your Name
