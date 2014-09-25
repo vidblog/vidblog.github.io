@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[>vid/<]]></title>
-  <link href="http://vid.blog.br/atom.xml" rel="self"/>
+  <title><![CDATA[Category: About | >vid/<]]></title>
+  <link href="http://vid.blog.br/./about/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
   <updated>2014-09-25T02:39:01-03:00</updated>
   <id>http://vid.blog.br/</id>
