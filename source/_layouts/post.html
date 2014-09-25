@@ -3,7 +3,6 @@ layout: default
 single: true
 ---
 
-<div>
 <article class="hentry" role="article">
   {% include article.html %}
   <footer>
@@ -31,13 +30,13 @@ single: true
     <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   </section>
 {% endif %}
-</div>
+
 {% unless page.sidebar == false %}
-<aside class="sidebar">
-  {% if site.post_asides.size %}
-    {% include_array post_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
+  <aside class="sidebar">
+    {% if site.post_asides.size %}
+      {% include_array post_asides %}
+    {% else %}
+      {% include_array default_asides %}
+    {% endif %}
+  </aside>
 {% endunless %}
