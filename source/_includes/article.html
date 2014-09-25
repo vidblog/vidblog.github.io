@@ -1,7 +1,7 @@
 {% unless page.no_header %}
   <header>
     <h1>
-    {% if index %}
+    {% if page.index %}
       <a href="{{ root_url }}{{ post.url }}">
         {% if site.titlecase %}
           {{ post.title | titlecase }}
@@ -24,7 +24,7 @@
   </header>
 {% endunless %}
 
-{% if index %}
+{% if page.index %}
   {{ content | excerpt }}
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
