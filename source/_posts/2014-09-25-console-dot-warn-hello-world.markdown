@@ -10,6 +10,8 @@ Toma essa então!
 
 Só me apresentando _rapidex_, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.
 
+<!--more-->
+
 ##E…
 
 Finalmente estou aqui, depois de ter a ideia de criar o blog mais ou menos há 7 meses atrás. Falando em ideia, vamos lá:
