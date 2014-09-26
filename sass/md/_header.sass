@@ -1,9 +1,22 @@
+@import ../settings/vars/md
+
 #header
-  h1
+  background-image: image-url("md_cover.png")
+  background-size: 100%
+  display: table
+  width: 100%
+  height: $header-height
+  z-index: -1
+  &, h1
     position: fixed
     top: 0
     left: 0
+  h1
     margin: 20px
+    z-index: 10
     a
       @extend %logo
       text-decoration: none
+  h2
+    @extend %description
+    margin-top: 103px
