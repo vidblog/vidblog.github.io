@@ -3,7 +3,7 @@ layout: post
 title: 'console.warn("Hello World")'
 date: 2014-09-25 00:04:47 -0300
 comments: true
-categories: "about"
+categories: about
 ---
 
 Toma essa então!
