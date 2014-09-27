@@ -19,21 +19,21 @@
     </h1>
 
     {% unless page.meta == false %}
-      <p>{% include post/date.html %} {{ time }}</p>
+      {% include post/date.html %} {{ time }}
     {% endunless %}
   </header>
 {% endunless %}
 
 {% if page.index %}
-  {{ content | excerpt }}
-  {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-  {% if excerpted == 'true' %}
-    <footer>
+  <p>
+    {{ content | excerpt | replace:"<p>","" | replace:"</p>", "" }}
+    {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+    {% if excerpted == 'true' %}
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">
         {{ site.excerpt_link }}
       </a>
-    </footer>
-  {% endif %}
+    {% endif %}
+  </p>
 {% else %}
   {{ content }}
 {% endif %}
