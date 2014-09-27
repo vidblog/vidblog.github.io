@@ -43,11 +43,6 @@
 </script>
 
 {% unless page.index %}
-  {% include disqus.html %}
   {% include facebook_like.html %}
   {% include twitter_sharing.html %}
-
-  {% comment %}
-    Add content to be output at the bottom of each page. (You might use this for analytics scripts, for example)
-  {% endcomment %}
 {% endunless %}
