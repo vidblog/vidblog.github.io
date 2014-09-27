@@ -4,6 +4,8 @@ index: true
 ---
 
 <div id="index" class="content">
+  {% include about.html %}
+
   {% for post in paginator.posts %}
     {% assign content = post.content %}
     <article class="feed-article">
