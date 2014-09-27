@@ -10,9 +10,9 @@
 
     $(window).on("scroll", function(a, b) {
       var self = $(this),
-          count = self.scrollTop() - 0;
+          count = Math.abs(self.scrollTop() - startScroll);
 
-      if(self.scrollTop() >= 0 && count < elementHeight) {
+      if(self.scrollTop() >= startScroll && count < elementHeight) {
         var blur = count / steps,
             scale = blur >= 0 ? 1 + (blur / 5) * .1 : 1
 
