@@ -1,15 +1,36 @@
 %post-feed
+  margin-top: 110px
   &:first-child
     margin-top: 76px
   header
     width: 100%
     display: table
+    margin-bottom: 34px
     h1
       @extend %unstyled
+      margin-bottom: 32px
       font-size: rem(45px)
       line-height: rem(48px)
       a
         @extend %reset-link
+    time
+      color: $gray
+      font-size: rem(18px)
+      display: table
+      +fill-parent
+      .date
+        margin: 0 10px
+        &::after
+          content: "-"
+          margin-left: 10px
+          color: $gray
+
+    &::after
+      content: ""
+      +span-columns(2 of 12)
+      +shift(5)
+      margin-top: 22px
+      border-bottom: 1px solid $light-gray
   p
     @extend %unstyled
     float: left

@@ -8,9 +8,7 @@ categories: about
 
 Toma essa então!
 
-Só me apresentando _rapidex_, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.
-
-<!--more-->
+Só me apresentando _rapidex_, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.<!--more-->
 
 ##E…
 
