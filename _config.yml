@@ -75,7 +75,7 @@ category_meta_description_prefix: "Categoria: "
 
 # Twitter
 #twitter_user: osaaid
-#twitter_tweet_button: true
+twitter_tweet_button: true
 
 # Google +1
 #google_plus_one: false
