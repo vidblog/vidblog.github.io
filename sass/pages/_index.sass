@@ -1,6 +1,10 @@
 #index
   text-align: center
-  .feed-article
-    @extend %post-feed
+  .feed-article,
+  .pagination
     +span-columns(8)
     +shift(2)
+  .feed-article
+    @extend %post-feed
+  .pagination
+    @extend %pagination

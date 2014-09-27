@@ -10,16 +10,15 @@ index: true
       {% include article.html %}
     </article>
   {% endfor %}
+
+  {% if paginator.previous_page != null or paginator.next_page != null %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a class="prev" href="{{paginator.previous_page_path}}"><</a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a class="next" href="{{paginator.next_page_path}}">></a>
+      {% endif %}
+    </div>
+  {% endif %}
 </div>
-
-{% if paginator.previous_page or paginator.next_page %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page_path}}">&larr;</a>
-    {% endif %}
-    {% if paginator.previous_page %}
-      <a class="next" href="{{paginator.previous_page_path}}">&rarr;</a>
-    {% endif %}
-  </div>
-{% endif %}
-
