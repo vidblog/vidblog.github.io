@@ -13,7 +13,7 @@
 
   
 
-  <meta name="description" content="console.warn("Hello World") Sep 25th, 2014 12:04 am, about Toma essa então! Só me apresentando rapidex, me chamo Enrique, tenho 23 anos e trabalho &hellip;">
+  <meta name="description" content="Enrique Marques Junior GitHub Facebook Twitter Feed console.warn("Hello World") Sep 25th, 2014 12:04 am, about Toma essa então! Só me apresentando &hellip;">
 
   
 
@@ -31,8 +31,8 @@
     
   ">
 
-  <link href="http://fonts.googleapis.com/css?family=Crete+Round">
   <link href="  /favicon.png" rel="icon">
+  <link href="http://fonts.googleapis.com/css?family=Crete+Round:400" rel="stylesheet" type="text/css">
   <link href="  /stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title=">vid/<" type="application/atom+xml">
 
@@ -70,6 +70,34 @@
 
     <main role="main">
       <div id="index" class="content">
+  <div class="about-author">
+  <img src="http://www.gravatar.com/avatar/4ba549ef8db80400725b785fba1443f5?s=135" width="135" height="135" alt="Enrique Marques Junior" />
+  <h3>Enrique Marques Junior</h3>
+  <ul class="social-links">
+    <li>
+      <a href="https://github.com/enriquesaid" target="_blank">
+        <i class="icon-github">GitHub</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/enriquesaid" target="_blank">
+        <i class="icon-facebook">Facebook</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/osaaid" target="_blank">
+        <i class="icon-twitter">Twitter</i>
+      </a>
+    </li>
+    <li>
+      <a href="  /atom.xml" target="_blank">
+        <i class="icon-feed">Feed</i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
   
     
     <article class="feed-article">
@@ -147,32 +175,27 @@ Só me apresentando <em>rapidex</em>, me chamo Enrique, tenho 23 anos e trabalho
 
     $(window).on("scroll", function(a, b) {
       var self = $(this),
-          count = Math.abs(self.scrollTop() - startScroll);
+          scrollTop = self.scrollTop(),
+          count = Math.abs(scrollTop - startScroll);
 
-      if(self.scrollTop() >= startScroll && count < elementHeight) {
+      if(scrollTop >= startScroll && count < elementHeight) {
         var blur = count / steps,
             scale = blur >= 0 ? 1 + (blur / 5) * .1 : 1
 
-        element.css({
-          'filter'         : 'blur('+blur+'px)',
-          '-webkit-filter' : 'blur('+blur+'px)',
-          '-moz-filter'    : 'blur('+blur+'px)',
-          '-o-filter'      : 'blur('+blur+'px)',
-          '-ms-filter'     : 'blur('+blur+'px)',
-
-          '-webkit-transform' : 'scale('+ scale +')',
-          '-moz-transform'    : 'scale('+ scale +')',
-          '-ms-transform'     : 'scale('+ scale +')',
-          '-o-transform'      : 'scale('+ scale +')',
-          'transform'         : 'scale('+ scale +')'
-        });
-
-        $("#header h2").css({
+        $(".cover-image, #header h2").css({
           'filter'         : 'blur('+blur+'px)',
           '-webkit-filter' : 'blur('+blur+'px)',
           '-moz-filter'    : 'blur('+blur+'px)',
           '-o-filter'      : 'blur('+blur+'px)',
           '-ms-filter'     : 'blur('+blur+'px)'
+        });
+
+        element.css({
+          '-webkit-transform' : 'scale('+ scale +')',
+          '-moz-transform'    : 'scale('+ scale +')',
+          '-ms-transform'     : 'scale('+ scale +')',
+          '-o-transform'      : 'scale('+ scale +')',
+          'transform'         : 'scale('+ scale +')'
         });
       }
     });

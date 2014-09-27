@@ -37,8 +37,8 @@ Sep 25 2014 posted in about ">
     
   ">
 
-  <link href="http://fonts.googleapis.com/css?family=Crete+Round">
   <link href="  /favicon.png" rel="icon">
+  <link href="http://fonts.googleapis.com/css?family=Crete+Round:400" rel="stylesheet" type="text/css">
   <link href="  /stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title=">vid/<" type="application/atom+xml">
 
@@ -68,8 +68,6 @@ Sep 25 2014 posted in about ">
 <header id="header" role="banner">
   <div class="content">
     <h1><a href="  /">>vid/<</a></h1>
-    
-      <h2>Front-end e outras coisas&#8230;</h2>
     
   </div>
 </header>
@@ -134,40 +132,32 @@ Sep 25 2014 posted in about ">
 
     $(window).on("scroll", function(a, b) {
       var self = $(this),
-          count = Math.abs(self.scrollTop() - startScroll);
+          scrollTop = self.scrollTop(),
+          count = Math.abs(scrollTop - startScroll);
 
-      if(self.scrollTop() >= startScroll && count < elementHeight) {
+      if(scrollTop >= startScroll && count < elementHeight) {
         var blur = count / steps,
             scale = blur >= 0 ? 1 + (blur / 5) * .1 : 1
 
-        element.css({
-          'filter'         : 'blur('+blur+'px)',
-          '-webkit-filter' : 'blur('+blur+'px)',
-          '-moz-filter'    : 'blur('+blur+'px)',
-          '-o-filter'      : 'blur('+blur+'px)',
-          '-ms-filter'     : 'blur('+blur+'px)',
-
-          '-webkit-transform' : 'scale('+ scale +')',
-          '-moz-transform'    : 'scale('+ scale +')',
-          '-ms-transform'     : 'scale('+ scale +')',
-          '-o-transform'      : 'scale('+ scale +')',
-          'transform'         : 'scale('+ scale +')'
-        });
-
-        $("#header h2").css({
+        $(".cover-image, #header h2").css({
           'filter'         : 'blur('+blur+'px)',
           '-webkit-filter' : 'blur('+blur+'px)',
           '-moz-filter'    : 'blur('+blur+'px)',
           '-o-filter'      : 'blur('+blur+'px)',
           '-ms-filter'     : 'blur('+blur+'px)'
         });
+
+        element.css({
+          '-webkit-transform' : 'scale('+ scale +')',
+          '-moz-transform'    : 'scale('+ scale +')',
+          '-ms-transform'     : 'scale('+ scale +')',
+          '-o-transform'      : 'scale('+ scale +')',
+          'transform'         : 'scale('+ scale +')'
+        });
       }
     });
   });
 </script>
-
-
-  
 
 
   
@@ -193,8 +183,6 @@ Sep 25 2014 posted in about ">
   </script>
 
 
-
-  
 
 
   </body>
