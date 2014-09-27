@@ -1,8 +1,6 @@
 %post-feed
   margin-top: 70px
   margin-bottom: 40px
-  &:first-child
-    margin-top: 76px
   header
     h1
       margin-bottom: 32px
@@ -10,8 +8,13 @@
       line-height: rem(48px)
       a
         @extend %reset-link
-    time
-      @extend %post-time
+    .meta
+      display: table
+      +fill-parent
+      time
+        @extend %post-time
+      &, .categories a
+        color: $gray
     &::after
       +span-columns(2 of 12)
       +shift(5)
