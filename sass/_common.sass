@@ -15,3 +15,11 @@ main
   display: table
   width: 100%
   background-color: white
+
+#page
+  .content > article
+    +span-columns(8)
+    +shift(2)
+    @extend %post-feed
+    header
+      @extend %post-feed-title

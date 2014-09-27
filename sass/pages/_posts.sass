@@ -1,19 +1,11 @@
 #post
-  #header
-    background: rgba(0, 0, 0, .5)
-    height: 85px
   .content > article
     +span-columns(8)
     +shift(2)
     @extend %post-feed
     margin-bottom: 0
     header
-      width: 120%
-      margin-left: -10%
-      text-align: center
-      h1
-        font-size: rem(55px)
-        line-height: rem(63px)
+      @extend %post-feed-title
     p
       font-size: rem(20px)
       line-height: rem(30px)
