@@ -12,15 +12,15 @@
   
   
   <url>
-    <loc>http://vid.blog.br/archives/</loc>
-    <lastmod>2014-09-27T17:27:45-03:00</lastmod>
+    <loc>http://vid.blog.br/arquivos/</loc>
+    <lastmod>2014-09-27T23:43:19-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://vid.blog.br/</loc>
-    <lastmod>2014-09-27T17:27:45-03:00</lastmod>
+    <lastmod>2014-09-27T23:43:19-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
