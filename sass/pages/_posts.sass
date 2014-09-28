@@ -7,9 +7,6 @@
     @extend %post-feed
     @extend %page-title
     margin-bottom: 0
-    +breakpoints("mobile")
-      +span-columns(10)
-      +shift(1)
     h2
       margin-top: 40px
       font-size: rem(36px)
@@ -21,9 +18,6 @@
     figure
       +span-columns(10 of 8)
       +shift(-1.5)
-      +breakpoints("mobile")
-        +span-columns(8 of 8)
-        +shift(0)
     figure
       @extend %unstyled
       margin:
@@ -36,54 +30,16 @@
       margin-top: 50px
       .about-author
         @extend %about-widget
-        width: 100%
-        display: table
-        margin-top: 20px
-        h3
-          margin-top: 15px
-        > img
-          float: left
-          margin-right: 10px
-          border-color: $light-gray
-        .author-description
-          margin: 10px 0
-          color: $gray
-        .social-links
-          text-align: left
+        @extend %about-widget-left
+      h4
+        margin-bottom: 10px
+        font-size: rem(25px)
+        line-height: rem(28px)
+        color: $text-color
       .others-posts
-        text-align: center
-        margin: 35px 0 0 0
-        padding: 0 10px
-        border:
-          width: 4px
-          style: solid
-          color: #CCC
-          top: 0
-          bottom: 0
+        @extend %lr-links
         a
           +span-columns(4 of 8)
-          display: block
-          font-size: rem(18px)
-          +breakpoints("mobile")
-            +span-columns(8 of 8)
-            display: table
-          &.prev-post
-            text-align: left
-            +breakpoints("mobile")
-              text-align: center
-            &::before
-              content: "«"
-              margin-left: 3px
-          &.next-post
-            text-align: right
-            float: right
-            +breakpoints("mobile")
-              padding-top: 10px
-              text-align: center
-              float: none
-            &::after
-              content: "»"
-              margin-right: 3px
 
 .sharing
   +fill-parent
@@ -101,6 +57,6 @@
   +span-columns(8)
   +shift(2)
   margin-top: 50px
-  +breakpoints("mobile")
-    +span-columns(10)
-    +shift(1)
+  header
+    margin-bottom: 20px
+    color: $text-color
