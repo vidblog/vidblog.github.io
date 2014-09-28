@@ -13,14 +13,14 @@
 
   
 
-  <meta name="description" content="console.warn("Hello World") Sep 25th, 2014 12:04 am, about Toma essa então! Só me apresentando rapidex, me chamo Enrique, tenho 23 anos e trabalho &hellip;">
+  <meta name="description" content="Entendendo E Usando: Function.prototype Sep 25th, 2014 7:57 pm, javascript There was plenty to process at the Flint Center in Cupertino, California &hellip;">
 
   
 
   <title>
     
       
-        console.warn(&#8220;Hello World&#8221;)
+        Entendendo E Usando: Function.prototype
       
     -
     
@@ -32,7 +32,7 @@
   <link rel="canonical" href="
     http://vid.blog.br
     
-      /about/console-dot-warn-hello-world
+      /javascript/entendendo-e-usando-function-dot-prototype
     
   ">
 
@@ -75,7 +75,7 @@
     <h1>
     
       
-        console.warn(&#8220;Hello World&#8221;)
+        Entendendo E Usando: Function.prototype
       
     
     </h1>
@@ -88,11 +88,11 @@
 
 
       <span class="meta">
-        <time class='entry-date' datetime='2014-09-25T00:04:47-03:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:04 am</span></time>, 
+        <time class='entry-date' datetime='2014-09-25T19:57:04-03:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:57 pm</span></time>, 
 
   <span class="categories">
     
-      <a class='category' href='  /./about/'>about</a>
+      <a class='category' href='  /./javascript/'>javascript</a>
     
   </span>
 
@@ -103,28 +103,77 @@
 
 
 
-  <p>Toma essa então!</p>
+  <p>There was plenty to process at the Flint Center in Cupertino, California, today. The event was Apple’s stab at making history again for the first time, so to speak, an ambition it signaled from the get-go with the selection of the location—the site of the original 1984 Macintosh launch and then the 1998 iMac announcement that marked Steve Jobs’s.<!-- more --></p>
 
-<p>Só me apresentando <em>rapidex</em>, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.<!--more--></p>
+<div><script src='https://gist.github.com/10023945.js'></script>
+<noscript><pre><code>// =============================================
+// Module
+// =============================================
+var EModule = function() {
+  var modules = {};
 
-<h2>E…</h2>
+  this.register = function(moduleName, module) {
+    modules[moduleName] = module;
+  };
 
-<p>Finalmente estou aqui, depois de ter a ideia de criar o blog mais ou menos há 7 meses atrás :(.
-Falando em ideia, vamos lá:</p>
+  this.start = function(moduleName, options) {
+    var module = new modules[moduleName](options);
 
-<p>Quando comecei a trabalhar com web logo criei um blog para postar tudo de novo que eu vinha descobrindo. Durou relativamente bastante, até que eu precisei dedicar meu tempo a outras coisas e por fim parei de postar. Postei em outros blogs durante um tempo, mas sempre com a ideia de voltar a postar em meu blog.</p>
+    if(typeof modules[moduleName]().events === &quot;function&quot;) {
+      module.events();
+    }
 
-<p>Hoje, minha ideia continua a mesma… postar coisas que descubro, compartilhar conhecimento e principalmente transformar isso em um meio de comunicação entre eu e pessoas que eu ainda não conheço. Existe muita gente que manda bem hoje em dia e meu objetivo é que esse conteúdo chegue tanto em pessoas que estão iniciando quanto em pessoas que tem conhecimento para debater os assuntos postados.</p>
+    if(typeof modules[moduleName]().init === &quot;function&quot;) {
+      module.init();
+    }
+  };
+};
 
-<h2>Porque?</h2>
+// =============================================
+// Init
+// =============================================
+var module = new EModule();
 
-<p>Acredito que publicar conteúdo é uma das maneiras mais eficazes (e mais &ldquo;prazerosas&rdquo;) de aprender. Em segundo, quero passar tudo que aprendi para o máximo de pessoas possíveis.</p>
+// =============================================
+// Register
+// =============================================
+module.register(&quot;console&quot;, function(options){
+  var Pub = {};
 
-<h2>Resumindo</h2>
+  var consoleFunc = function(number, name) {
+    console.log(&quot;consoleFunc&quot;, name, number);
+  };
 
-<p>Quero contribuir com o máximo de conteúdo possível sobre HTML, CSS e Javascript, com um pouco sobre SEO, algo de back-end ou qualquer outra coisa relacionada a desenvolvimento e web.</p>
+  var console2Func = function(event, number, name) {
+    console.log(&quot;console2Func&quot;, name, number);
+  };
 
-<p>Ah, o nome? é div ao contrário. Sim, eu sei que…. enfim.</p>
+  Pub.events = function() {
+    $(document).on(&quot;teste&quot;, console2Func);
+  };
+
+  Pub.init = function() {
+    consoleFunc(options.name, options.number);
+    $(document).trigger(&quot;teste&quot;, [options.name, options.number]);
+  };
+
+  return Pub;
+});
+
+// =============================================
+// Start
+// =============================================
+module.start(&quot;console&quot;, {
+  number: 100,
+  name: &quot;Suzuki&quot;
+});</code></pre></noscript></div>
+
+
+<p>There was plenty to process at the Flint Center in Cupertino, California, today. The event was Apple’s stab at making history again for the first time, so to speak, an ambition it signaled from the get-go with the selection of the location—the site of the original 1984 Macintosh launch and then the 1998 iMac announcement that marked Steve Jobs’s. There was plenty to process at the Flint Center in Cupertino, California, today. The event was Apple’s stab at making history again for the first time, so to speak, an ambition it signaled from the get-go with the selection of the location—the site of the original 1984 Macintosh launch and then the 1998 iMac announcement that marked Steve Jobs’s.</p>
+
+<p>There was plenty to process at the Flint Center in Cupertino, California, today. The event was Apple’s stab at making history again for the first time, so to speak, an ambition it signaled from the get-go with the selection of the location—the site of the original 1984 Macintosh launch and then the 1998 iMac announcement that marked Steve Jobs’s.</p>
+
+<p>There was plenty to process at the Flint Center in Cupertino, California, today.</p>
 
 
 
@@ -132,7 +181,7 @@ Falando em ideia, vamos lá:</p>
       
         <div class="sharing">
   
-    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/about/console-dot-warn-hello-world/" data-via="osaaid" data-counturl="http://vid.blog.br/about/console-dot-warn-hello-world/">Tweet</a>
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/javascript/entendendo-e-usando-function-dot-prototype/" data-via="osaaid" data-counturl="http://vid.blog.br/javascript/entendendo-e-usando-function-dot-prototype/">Tweet</a>
   
 
   
@@ -177,9 +226,13 @@ Falando em ideia, vamos lá:</p>
         <h4>Leia também:</h4>
         <div class="others-posts">
           
-          
-            <a class="next-post" href="  /javascript/construtores-em-javascript-e-praticas/" title="Próximo post: Construtores em Javascript e praticas">
+            <a class="prev-post" href="  /javascript/construtores-em-javascript-e-praticas/" title="Post anterior: Construtores em Javascript e praticas">
               Construtores em Javascript e praticas
+            </a>
+          
+          
+            <a class="next-post" href="  /javascript/mais-um-post-de-teste-um-pouco-maior/" title="Próximo post: Mais um post de teste, um pouco maior">
+              Mais um post de teste, um pouco maior
             </a>
           
         </div>
@@ -241,8 +294,8 @@ Falando em ideia, vamos lá:</p>
       var disqus_shortname = 'vid-blog';
       
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vid.blog.br/about/console-dot-warn-hello-world/';
-        var disqus_url = 'http://vid.blog.br/about/console-dot-warn-hello-world/';
+        var disqus_identifier = 'http://vid.blog.br/javascript/entendendo-e-usando-function-dot-prototype/';
+        var disqus_url = 'http://vid.blog.br/javascript/entendendo-e-usando-function-dot-prototype/';
         var disqus_script = 'embed.js';
       
 
