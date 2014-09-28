@@ -3,6 +3,30 @@
   
   
   <url>
+    <loc>http://vid.blog.br/javascript/mais-um-post-de-teste-um-pouco-maior/</loc>
+    
+    <lastmod>2014-09-26T23:10:04-03:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://vid.blog.br/javascript/entendendo-e-usando-function-dot-prototype/</loc>
+    
+    <lastmod>2014-09-25T19:57:04-03:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://vid.blog.br/javascript/construtores-em-javascript-e-praticas/</loc>
+    
+    <lastmod>2014-09-25T19:48:10-03:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://vid.blog.br/about/console-dot-warn-hello-world/</loc>
     
     <lastmod>2014-09-25T00:04:47-03:00</lastmod>
@@ -13,14 +37,14 @@
   
   <url>
     <loc>http://vid.blog.br/arquivos/</loc>
-    <lastmod>2014-09-28T05:51:52-03:00</lastmod>
+    <lastmod>2014-09-28T06:06:54-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://vid.blog.br/</loc>
-    <lastmod>2014-09-28T05:51:52-03:00</lastmod>
+    <lastmod>2014-09-28T06:06:54-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
