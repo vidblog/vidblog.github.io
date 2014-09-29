@@ -11,7 +11,8 @@ tags:
 ---
 
 
-Quando comecei a ideia do blog já tinha em mente criar um tema para poder disponibilizar, e com o Octopress é lindo de fazer isso.
+
+Quando comecei a ideia do blog já tinha em mente criar um tema para poder disponibilizar e com o Octopress é lindo de fazer isso.
 Além do tema, pensei em disponibilizar tudo que fosse criando no blog, neste post vou mostrar como criei o tema e como estou usando ele aqui.<!--more-->
 
 ## Sobre o Octopress
@@ -24,12 +25,12 @@ Aqui no blog estou usando o [github pages](https://pages.github.com/) como “ho
 ## Criando um tema para Octopress
 
 Vamos logo ao assunto principal, né?!
-Criar um tema no octopress é relativamente simples, mas é claro, se você quiser disponibilizar ele bonitinho para galera (que é o ideal), a história muda, mas não muito.
+Criar um tema no octopress é relativamente simples, mas é claro, se você quiser disponibilizar de maneira legal de usar (que é o ideal) a história muda, mas não muito.
 É o que eu estou começando a fazer com o tema aqui do blog.
 
-O legal é que da para usar o tema `classic` (que é o default) como base, e editar os arquivos das pastas `sass` e `source`. Quando finalizar o tema, o ideal é colocar essas duas pastas em `.theme/nome_do_tema` para poder de fato instalar ele no seu blog com os comandos `rake install[nome_do_tema]` e `rake generate`. Com o próprio exemplo do tema padrão da pra aprender e qualquer coisa é só olhar as [docs do liquid](https://github.com/Shopify/liquid/wiki), a “markup language”, usada no Jekyll.
+Criar o tema em si é bem simples, da para usar o tema `classic` (que é o default) como base e editar os arquivos das pastas `sass` e `source`. Quando finalizar o tema, o ideal é colocar essas duas pastas em `.theme/nome_do_tema` para poder, de fato, instalá-lo no seu blog com os comandos `rake install[nome_do_tema]` e `rake generate`. Com o próprio exemplo do tema padrão da pra aprender e qualquer coisa é só olhar as [docs do liquid](https://github.com/Shopify/liquid/wiki), a “markup language”, usada no Jekyll.
 
-Simples né?
+Simples, né?
 
 ## EMD Theme
 
@@ -43,7 +44,7 @@ Já o tema esta [**aqui**](https://github.com/vidblog/emd-theme) e para instalar
 
 O tema foi pensado para ser focado no texto, sem muita coisa. Tem o básico para entregar o conteúdo com qualidade de leitura.
 
-A graça de fazer o tema é ele ser usado em outros blogs, o que - por enquanto - não é 100% indicado, pois estou criando muitas coisas novas nele em pouco tempo e também organizando tudo. Mas quem quiser ja pode dar palpites e principalmente ajudar. É só  criar um **pull request**. :)
+A graça de fazer o tema é ele ser usado em outros blogs, o que - por enquanto - não é 100% indicado, pois estou criando muitas coisas novas nele em pouco tempo e também organizando tudo. Mas quem quiser, ja pode dar palpites e principalmente ajudar. É só criar um **pull request**. :)
 
 Ainda falta bastante coisa que eu quero adicionar e junto com o tema algumas rakes tasks e configurações no Octopress.
 
