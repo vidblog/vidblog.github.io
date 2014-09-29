@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[>vid/<]]></title>
-  <link href="http://vid.blog.br/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: html | >vid/<]]></title>
+  <link href="http://vid.blog.br/tags/html/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
   <updated>2014-09-29T02:33:57-03:00</updated>
   <id>http://vid.blog.br/</id>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octopress: Começando a Criar O Tema Do Blog]]></title>
+    <title type="html"><![CDATA[Octopress: Começando a criar o tema do blog]]></title>
     <link href="http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/"/>
     <updated>2014-09-29T02:03:40-03:00</updated>
     <id>http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog</id>
@@ -41,7 +41,7 @@ Criar um tema no octopress é relativamente simples, mas é claro, se você quis
 <h2>EMD Theme</h2>
 
 <p><figure>
-<img src="http://vid.blog.br/images/posts/emd-theme-preview.png" alt="EMD Theme Screenshot" />
+<img src="/images/posts/emd-theme-preview.png" alt="EMD Theme Screenshot" />
 </figure></p>
 
 <p>EMD Theme é o nome que dei ao tema do blog, o design é inspirado no <a href="http://medium.com">Medium</a> e os <a href="https://github.com/vidblog/emd-theme-layout">PDS’s estão em um repositório separado</a>.</p>
@@ -57,36 +57,6 @@ Criar um tema no octopress é relativamente simples, mas é claro, se você quis
 <p>Vou falar mais sobre Octopress e Jekyll e deixar o tema completo para uso.</p>
 
 <p>Abraços!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[console.warn("Hello World")]]></title>
-    <link href="http://vid.blog.br/about/console-dot-warn-hello-world/"/>
-    <updated>2014-09-25T00:04:47-03:00</updated>
-    <id>http://vid.blog.br/about/console-dot-warn-hello-world</id>
-    <content type="html"><![CDATA[<p>Toma essa então!</p>
-
-<p>Só me apresentando <em>rapidex</em>, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.<!--more--></p>
-
-<h2>E…</h2>
-
-<p>Finalmente estou aqui, depois de ter a ideia de criar o blog mais ou menos há 7 meses atrás :(.
-Falando em ideia, vamos lá:</p>
-
-<p>Quando comecei a trabalhar com web logo criei um blog para postar tudo de novo que eu vinha descobrindo. Durou relativamente bastante, até que eu precisei dedicar meu tempo a outras coisas e por fim parei de postar. Postei em outros blogs durante um tempo, mas sempre com a ideia de voltar a postar em meu blog.</p>
-
-<p>Hoje, minha ideia continua a mesma… postar coisas que descubro, compartilhar conhecimento e principalmente transformar isso em um meio de comunicação entre eu e pessoas que eu ainda não conheço. Existe muita gente que manda bem hoje em dia e meu objetivo é que esse conteúdo chegue tanto em pessoas que estão iniciando quanto em pessoas que tem conhecimento para debater os assuntos postados.</p>
-
-<h2>Porque?</h2>
-
-<p>Acredito que publicar conteúdo é uma das maneiras mais eficazes (e mais &ldquo;prazerosas&rdquo;) de aprender. Em segundo, quero passar tudo que aprendi para o máximo de pessoas possíveis.</p>
-
-<h2>Resumindo</h2>
-
-<p>Quero contribuir com o máximo de conteúdo possível sobre HTML, CSS e Javascript, com um pouco sobre SEO, algo de back-end ou qualquer outra coisa relacionada a desenvolvimento e web.</p>
-
-<p>Ah, o nome? é div ao contrário. Sim, eu sei que…. enfim.</p>
 ]]></content>
   </entry>
   

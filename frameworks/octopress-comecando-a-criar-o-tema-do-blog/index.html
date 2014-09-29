@@ -13,14 +13,14 @@
 
   
 
-  <meta name="description" content="console.warn("Hello World") Sep 25th, 2014 12:04 am, about Toma essa então! Só me apresentando rapidex, me chamo Enrique, tenho 23 anos e trabalho &hellip;">
+  <meta name="description" content="Octopress: Começando a Criar O Tema Do Blog Sep 29th, 2014 2:03 am, frameworks ( css, html, javascript ) Quando comecei a ideia do blog já tinha em &hellip;">
 
   
 
   <title>
     
       
-        console.warn(&#8220;Hello World&#8221;)
+        Octopress: Começando a Criar O Tema Do Blog
       
     -
     
@@ -32,7 +32,7 @@
   <link rel="canonical" href="
     http://vid.blog.br
     
-      /about/console-dot-warn-hello-world
+      /frameworks/octopress-comecando-a-criar-o-tema-do-blog
     
   ">
 
@@ -75,7 +75,7 @@
     <h1>
     
       
-        console.warn(&#8220;Hello World&#8221;)
+        Octopress: Começando a Criar O Tema Do Blog
       
     
     </h1>
@@ -88,17 +88,23 @@
 
 
       <span class="meta">
-        <time class='entry-date' datetime='2014-09-25T00:04:47-03:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:04 am</span></time>,
+        <time class='entry-date' datetime='2014-09-29T02:03:40-03:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>2:03 am</span></time>,
         
 
   <span class="categories">
     
-      <a class='category' href='  /./about/'>about</a>
+      <a class='category' href='  /./frameworks/'>frameworks</a>
     
   </span>
 
 
         
+
+<span class="tags">
+  (
+    <a class='tag' href='  /tags/css/'>css</a>, <a class='tag' href='  /tags/html/'>html</a>, <a class='tag' href='  /tags/javascript/'>javascript</a>
+  )
+</span>
 
 
       </span>
@@ -107,28 +113,45 @@
 
 
 
-  <p>Toma essa então!</p>
+  <p>Quando comecei a ideia do blog já tinha em mente criar um tema para poder disponibilizar, e com o Octopress é lindo de fazer isso.
+Além do tema, pensei em disponibilizar tudo que fosse criando no blog, neste post vou mostrar como criei o tema e como estou usando ele aqui.<!--more--></p>
 
-<p>Só me apresentando <em>rapidex</em>, me chamo Enrique, tenho 23 anos e trabalho com web a alguns anos.<!--more--></p>
+<h2>Sobre o Octopress</h2>
 
-<h2>E…</h2>
+<p><a href="http://octopress.org/">Octopress</a> é um framework por cima do <a href="http://jekyllrb.com/">Jekyll</a> que é um gerador de páginas estáticas em Ruby, que resumindo, permite a criação de um blog somente com HTML, CSS, e Javascript. O que o octopress faz é auxiliar (basicamente por rake tasks) nas tarefas de criar novos posts, páginas e principalmente fazer deploy.
+Criar um blog com octopress é muito simples, basta seguir os passos da <a href="http://octopress.org/docs/">documentação do site</a> que é sucesso.</p>
 
-<p>Finalmente estou aqui, depois de ter a ideia de criar o blog mais ou menos há 7 meses atrás :(.
-Falando em ideia, vamos lá:</p>
+<p>Aqui no blog estou usando o <a href="https://pages.github.com/">github pages</a> como “hospedagem” e o próprio octopress tem uma task para fazer deploy lá.</p>
 
-<p>Quando comecei a trabalhar com web logo criei um blog para postar tudo de novo que eu vinha descobrindo. Durou relativamente bastante, até que eu precisei dedicar meu tempo a outras coisas e por fim parei de postar. Postei em outros blogs durante um tempo, mas sempre com a ideia de voltar a postar em meu blog.</p>
+<h2>Criando um tema para Octopress</h2>
 
-<p>Hoje, minha ideia continua a mesma… postar coisas que descubro, compartilhar conhecimento e principalmente transformar isso em um meio de comunicação entre eu e pessoas que eu ainda não conheço. Existe muita gente que manda bem hoje em dia e meu objetivo é que esse conteúdo chegue tanto em pessoas que estão iniciando quanto em pessoas que tem conhecimento para debater os assuntos postados.</p>
+<p>Vamos logo ao assunto principal né.
+Criar um tema no octopress é relativamente simples, mas é claro, se você quiser disponibilizar ele bonitinho para galera (que é o ideal), a história muda, mas não muito.
+É o que eu estou começando a fazer com o tema aqui do blog.</p>
 
-<h2>Porque?</h2>
+<p>O legal é que da para usar o tema <code>classic</code> (que é o default) como base, e editar os arquivos das pastas <code>sass</code> e <code>source</code>. Quando finalizar o tema, o ideal é colocar essas duas pastas em <code>.theme/nome_do_tema</code> para poder de fato instalar ele no seu blog com os comandos <code>rake install[nome_do_tema]</code> e <code>rake generate</code>. Com o próprio exemplo do tema padrão da pra aprender e qualquer coisa é só olhar as <a href="https://github.com/Shopify/liquid/wiki">docs do liquid</a>, a “markup language”, usada no Jekyll.</p>
 
-<p>Acredito que publicar conteúdo é uma das maneiras mais eficazes (e mais &ldquo;prazerosas&rdquo;) de aprender. Em segundo, quero passar tudo que aprendi para o máximo de pessoas possíveis.</p>
+<p>Simples né?</p>
 
-<h2>Resumindo</h2>
+<h2>EMD Theme</h2>
 
-<p>Quero contribuir com o máximo de conteúdo possível sobre HTML, CSS e Javascript, com um pouco sobre SEO, algo de back-end ou qualquer outra coisa relacionada a desenvolvimento e web.</p>
+<p><figure>
+<img src="  /images/posts/emd-theme-preview.png" alt="EMD Theme Screenshot" />
+</figure></p>
 
-<p>Ah, o nome? é div ao contrário. Sim, eu sei que…. enfim.</p>
+<p>EMD Theme é o nome que dei ao tema do blog, o design é inspirado no <a href="http://medium.com">Medium</a> e os <a href="https://github.com/vidblog/emd-theme-layout">PDS’s estão em um repositório separado</a>.</p>
+
+<p>Já o tema esta <a href="https://github.com/vidblog/emd-theme"><strong>aqui</strong></a> e para instalar existe alguns passos a mais que o normal, mas pretendo organizar ainda.</p>
+
+<p>O tema foi pensado para ser focado no texto, sem muita coisa. Tem o básico para entregar o conteúdo com qualidade de leitura.</p>
+
+<p>A graça de fazer o tema é ele ser usado em outros blogs, o que - por enquanto - não é 100% indicado, pois estou criando muitas coisas novas nele em pouco tempo e também organizando tudo. Mas quem quiser ja pode dar palpites e principalmente ajudar. É só  criar um <strong>pull request</strong>. :)</p>
+
+<p>Ainda falta bastante coisa que eu quero adicionar e junto com o tema algumas rakes tasks e configurações no Octopress.</p>
+
+<p>Vou falar mais sobre Octopress e Jekyll e deixar o tema completo para uso.</p>
+
+<p>Abraços!</p>
 
 
 
@@ -136,7 +159,7 @@ Falando em ideia, vamos lá:</p>
       
         <div class="sharing">
   
-    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/about/console-dot-warn-hello-world/" data-via="osaaid" data-counturl="http://vid.blog.br/about/console-dot-warn-hello-world/">Tweet</a>
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/" data-via="osaaid" data-counturl="http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/">Tweet</a>
   
 
   
@@ -181,10 +204,10 @@ Falando em ideia, vamos lá:</p>
         <h4>Leia também:</h4>
         <div class="others-posts">
           
-          
-            <a class="next-post" href="  /frameworks/octopress-comecando-a-criar-o-tema-do-blog/" title="Próximo post: Octopress: Começando a criar o tema do blog">
-              Octopress: Começando a criar o tema do blog
+            <a class="prev-post" href="  /about/console-dot-warn-hello-world/" title="Post anterior: console.warn("Hello World")">
+              console.warn(&#8220;Hello World&#8221;)
             </a>
+          
           
         </div>
       
@@ -245,8 +268,8 @@ Falando em ideia, vamos lá:</p>
       var disqus_shortname = 'vid-blog';
       
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vid.blog.br/about/console-dot-warn-hello-world/';
-        var disqus_url = 'http://vid.blog.br/about/console-dot-warn-hello-world/';
+        var disqus_identifier = 'http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/';
+        var disqus_url = 'http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/';
         var disqus_script = 'embed.js';
       
 
