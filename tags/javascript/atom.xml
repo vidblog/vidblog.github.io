@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: javascript | >vid/<]]></title>
   <link href="http://vid.blog.br/tags/javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-09-29T14:21:05-03:00</updated>
+  <updated>2014-09-29T14:35:14-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -23,7 +23,7 @@ Além do tema, pensei em disponibilizar tudo que fosse criando no blog, neste po
 
 <h2>Sobre o Octopress</h2>
 
-<p><a href="http://octopress.org/">Octopress</a> é um framework por cima do <a href="http://jekyllrb.com/">Jekyll</a> que é um gerador de páginas estáticas em Ruby, que resumindo, permite a criação de um blog somente com HTML, CSS, e Javascript. O que o octopress faz é auxiliar (basicamente por rake tasks) nas tarefas de criar novos posts, páginas e principalmente fazer deploy.
+<p><a href="http://octopress.org/">Octopress</a> é um framework por cima do <a href="http://jekyllrb.com/">Jekyll</a>, que é um gerador de páginas estáticas em Ruby, que resumindo, permite a criação de um blog somente com HTML, CSS, e Javascript. O que o octopress faz é auxiliar (basicamente por rake tasks) nas tarefas de criar novos posts, páginas e principalmente fazer deploy.
 Criar um blog com octopress é muito simples, basta seguir os passos da <a href="http://octopress.org/docs/">documentação do site</a> que é sucesso.</p>
 
 <p>Aqui no blog estou usando o <a href="https://pages.github.com/">github pages</a> como “hospedagem” e o próprio octopress tem uma task para fazer deploy lá.</p>
@@ -46,11 +46,11 @@ Criar um tema no octopress é relativamente simples, mas é claro, se você quis
 
 <p>EMD Theme é o nome que dei ao tema do blog, o design é inspirado no <a href="http://medium.com">Medium</a> e os <a href="https://github.com/vidblog/emd-theme-layout">PDS’s estão em um repositório separado</a>.</p>
 
-<p>Já o tema esta <a href="https://github.com/vidblog/emd-theme"><strong>aqui</strong></a> e para instalar existe alguns passos a mais que o normal, mas pretendo organizar ainda.</p>
+<p>Já o tema está <a href="https://github.com/vidblog/emd-theme"><strong>aqui</strong></a> e para instalar existe alguns passos a mais que o normal, mas pretendo organizar ainda.</p>
 
 <p>O tema foi pensado para ser focado no texto, sem muita coisa. Tem o básico para entregar o conteúdo com qualidade de leitura.</p>
 
-<p>A graça de fazer o tema é ele ser usado em outros blogs, o que - por enquanto - não é 100% indicado, pois estou criando muitas coisas novas nele em pouco tempo e também organizando tudo. Mas quem quiser, ja pode dar palpites e principalmente ajudar. É só criar um <strong>pull request</strong>. :)</p>
+<p>A graça de fazer o tema é ele ser usado em outros blogs, o que - por enquanto - não é 100% indicado, pois estou criando muitas coisas novas nele em pouco tempo e também organizando tudo. Mas quem quiser, já pode dar palpites e principalmente ajudar. É só criar um <strong>pull request</strong>. :)</p>
 
 <p>Ainda falta bastante coisa que eu quero adicionar e junto com o tema algumas rakes tasks e configurações no Octopress.</p>
 
