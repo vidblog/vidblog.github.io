@@ -68,6 +68,9 @@ titlecase: true       # Converts page and post titles to titlecase
 category_title_prefix: "Categoria: "
 category_meta_description_prefix: "Categoria: "
 
+tag_title_prefix: "Tag: "
+tag_meta_description_prefix: "Tag: "
+
 # Github repositories
 github_user: enriquesaid
 #github_repo_count: 0
