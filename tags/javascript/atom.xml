@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: javascript | >vid/<]]></title>
+  <title><![CDATA[Tag: javascript | vid]]></title>
   <link href="http://vid.blog.br/tags/javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-10-01T18:01:58-03:00</updated>
+  <updated>2014-10-01T18:05:01-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
