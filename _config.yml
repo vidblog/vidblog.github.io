@@ -66,11 +66,11 @@ titlecase: true       # Converts page and post titles to titlecase
 #   3rd Party Settings    #
 # ----------------------- #
 #
-category_title_prefix: "Categoria: "
-category_meta_description_prefix: "Categoria: "
+category_title_prefix: "Artigos da categoria: "
+category_meta_description_prefix: "Artigos da categoria: "
 
-tag_title_prefix: "Tag: "
-tag_meta_description_prefix: "Tag: "
+tag_title_prefix: "Artigos sobre: "
+tag_meta_description_prefix: "Artigos sobre: "
 
 # Github repositories
 github_user: enriquesaid
