@@ -88,7 +88,7 @@ twitter_tweet_button: true
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-#googleplus_user:
+googleplus_user: EnriqueMarquesJunior
 #googleplus_hidden: false
 
 # Pinboard
