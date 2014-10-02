@@ -1,4 +1,5 @@
-require 'sass-globbing'
+require "sass-globbing"
+require "compass/import-once/activate"
 
 # Require any additional compass plugins here.
 project_type = :stand_alone
@@ -17,7 +18,6 @@ fonts_dir = "source/fonts"
 
 line_comments = false
 output_style = :compressed
-
 
 add_import_path "vendor/bower/bourbon/dist/"
 add_import_path "vendor/bower/neat/app/assets/stylesheets/"
