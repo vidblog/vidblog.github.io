@@ -105,7 +105,7 @@
 
 <h2>Criando UMA função:</h2>
 
-<p>O primeiro ponto que procuro pensar é em criar funções que faça uma única coisa.</p>
+<p>O primeiro ponto que procuro pensar é em criar funções que façam uma única coisa.</p>
 
 <p>Um exemplo:</p>
 
@@ -127,7 +127,7 @@
 
 <h2>Funções em Objetos</h2>
 
-<p>No javascript praticamente tudo é um objeto e um objeto pode ter funções:</p>
+<p>No javascript, praticamente, tudo é um objeto e um objeto pode ter funções:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -170,7 +170,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Pra resolver isso podemos criar uma função de forma que ela mantenha suas variáveis dentro do seu escopo:</p>
+<p>Pra resolver isso, podemos criar uma função de forma que ela mantenha suas variáveis dentro do seu escopo:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -202,14 +202,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Não existe a melhor forma, mas é um exemplo de como retornar somente a função e não permitir a alteração dos atributos como no ultimo exemplo.</p>
+<p>Não existe a melhor forma, mas é um exemplo de como retornar somente a função e não permitir a alteração dos atributos como no último exemplo.</p>
 
 <h3>Organizando seu código</h3>
 
 <p>Vale lembrar a importância que existe em organizar seu código.
 No front-end existem as camadas de <code>HTML</code>, <code>CSS</code> e <code>Javascript</code> e não devemos misturar responsabilidades de uma camada com a outra.</p>
 
-<p>Porém ainda encontramos isso hoje em dia:</p>
+<p>Porém, ainda encontramos isso hoje em dia:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">“#”</span> <span class="na">style=</span><span class="s">“color:</span> <span class="na">red</span><span class="err">”</span> <span class="na">onClick=</span><span class="s">“clickFunction()”</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
@@ -242,7 +242,7 @@ Podemos chamar uma função com <code>new</code> na frente e isso instancia essa
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Ao fazer isso, temos guardamos o retorno do construtor na variável <code>person</code> e através dela podemos acessar as variáveis que foram criadas dentro do construtor:</p>
+<p>Ao fazer isso, guardamos o retorno do construtor na variável <code>person</code> e, através dela, podemos acessar as variáveis que foram criadas dentro do construtor:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -264,7 +264,7 @@ Podemos chamar uma função com <code>new</code> na frente e isso instancia essa
 
 <h3>Criando funções usando prototype</h3>
 
-<p>No exemplo acima, poderíamos criar uma função direto dentro do construtor, mas não é uma boa ideia pois para cada nova instancia as funções seriam criadas novamente. Um exemplo:</p>
+<p>No exemplo acima, poderíamos criar uma função direto dentro do construtor, mas não é uma boa ideia, pois para cada nova instancia as funções seriam criadas novamente. Um exemplo:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -295,7 +295,7 @@ Podemos chamar uma função com <code>new</code> na frente e isso instancia essa
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Feito assim temos uma função <code>getFullName</code> na variável <code>person</code> e outra na variável <code>person2</code>. &ldquo;Usando <code>prototype</code> a função será criada dentro do objeto <code>Person</code>”:</p>
+<p>Feito assim, temos uma função <code>getFullName</code> na variável <code>person</code> e outra na variável <code>person2</code>. Usando <code>prototype</code> a função será criada dentro do objeto <code>Person</code>:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos sobre: javascript | vid]]></title>
   <link href="http://vid.blog.br/tags/javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-10-14T20:07:15-03:00</updated>
+  <updated>2014-10-14T20:35:53-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -24,7 +24,7 @@
 
 <h2>Criando UMA função:</h2>
 
-<p>O primeiro ponto que procuro pensar é em criar funções que faça uma única coisa.</p>
+<p>O primeiro ponto que procuro pensar é em criar funções que façam uma única coisa.</p>
 
 <p>Um exemplo:
 <code>js
@@ -40,7 +40,7 @@ getFullName(“Nome”, “Sobrenome”); // “Nome Sobrenome"
 
 <h2>Funções em Objetos</h2>
 
-<p>No javascript praticamente tudo é um objeto e um objeto pode ter funções:
+<p>No javascript, praticamente, tudo é um objeto e um objeto pode ter funções:
 <code>js
 var myObject = {
      getFullName: function(name, lastName) {
@@ -73,7 +73,7 @@ myObject.getFullName(“Nome”, “Sobrenome”); // “Nome Sobrenome"
 </span><span class='line'><span class="nx">myObject</span><span class="p">.</span><span class="nx">getFullName</span><span class="p">(</span><span class="err">“</span><span class="nx">Nome</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="nx">Sobrenome</span><span class="err">”</span><span class="p">);</span> <span class="c1">// “Nome&quot;</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>Pra resolver isso podemos criar uma função de forma que ela mantenha suas variáveis dentro do seu escopo:
+<p>Pra resolver isso, podemos criar uma função de forma que ela mantenha suas variáveis dentro do seu escopo:
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -105,14 +105,14 @@ myObject.getFullName(“Nome”, “Sobrenome”); // “Nome Sobrenome"
 fullName(“Nome”, “Sobrenome”).get(); // “Nome Sobrenome"
 </code></p>
 
-<p>Não existe a melhor forma, mas é um exemplo de como retornar somente a função e não permitir a alteração dos atributos como no ultimo exemplo.</p>
+<p>Não existe a melhor forma, mas é um exemplo de como retornar somente a função e não permitir a alteração dos atributos como no último exemplo.</p>
 
 <h3>Organizando seu código</h3>
 
 <p>Vale lembrar a importância que existe em organizar seu código.
 No front-end existem as camadas de <code>HTML</code>, <code>CSS</code> e <code>Javascript</code> e não devemos misturar responsabilidades de uma camada com a outra.</p>
 
-<p>Porém ainda encontramos isso hoje em dia:
+<p>Porém, ainda encontramos isso hoje em dia:
 <code>html
 &lt;a href=“#” style=“color: red” onClick=“clickFunction()”&gt;Link&lt;/a&gt;
 </code></p>
@@ -141,7 +141,7 @@ Podemos chamar uma função com <code>new</code> na frente e isso instancia essa
 </span><span class='line'><span class="kd">var</span> <span class="nx">person2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="err">“</span><span class="nx">Nome</span> <span class="mi">2</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="nx">Sobrenome</span> <span class="mi">2</span><span class="err">”</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>Ao fazer isso, temos guardamos o retorno do construtor na variável <code>person</code> e através dela podemos acessar as variáveis que foram criadas dentro do construtor:
+<p>Ao fazer isso, guardamos o retorno do construtor na variável <code>person</code> e, através dela, podemos acessar as variáveis que foram criadas dentro do construtor:
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -159,7 +159,7 @@ Podemos chamar uma função com <code>new</code> na frente e isso instancia essa
 
 <h3>Criando funções usando prototype</h3>
 
-<p>No exemplo acima, poderíamos criar uma função direto dentro do construtor, mas não é uma boa ideia pois para cada nova instancia as funções seriam criadas novamente. Um exemplo:</p>
+<p>No exemplo acima, poderíamos criar uma função direto dentro do construtor, mas não é uma boa ideia, pois para cada nova instancia as funções seriam criadas novamente. Um exemplo:</p>
 
 <pre><code class="js">var Person = function(name, lastName) {
      this.name = name;
@@ -176,7 +176,7 @@ person.getFullName(); // “Nome Sobrenome"
 person2.getFullName(); // “Nome2 Sobrenome2"
 </code></pre>
 
-<p>Feito assim temos uma função <code>getFullName</code> na variável <code>person</code> e outra na variável <code>person2</code>. &ldquo;Usando <code>prototype</code> a função será criada dentro do objeto <code>Person</code>”:
+<p>Feito assim, temos uma função <code>getFullName</code> na variável <code>person</code> e outra na variável <code>person2</code>. Usando <code>prototype</code> a função será criada dentro do objeto <code>Person</code>:
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
