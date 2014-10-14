@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://vid.blog.br/javascript/javascript-functions-boas-praticas-e-funcoes-construtoras/</loc>
+    
+    <lastmod>2014-10-08T19:18:00-03:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://vid.blog.br/frameworks/octopress-comecando-a-criar-o-tema-do-blog/</loc>
     
     <lastmod>2014-09-29T02:03:40-03:00</lastmod>
@@ -21,14 +29,14 @@
   
   <url>
     <loc>http://vid.blog.br/arquivos/</loc>
-    <lastmod>2014-10-02T20:25:13-03:00</lastmod>
+    <lastmod>2014-10-14T20:07:15-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://vid.blog.br/</loc>
-    <lastmod>2014-10-02T20:25:13-03:00</lastmod>
+    <lastmod>2014-10-14T20:07:15-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
