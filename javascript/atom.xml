@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos Da Categoria: Javascript | vid]]></title>
   <link href="http://vid.blog.br/./javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-10-14T20:35:53-03:00</updated>
+  <updated>2014-10-15T01:36:48-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -209,7 +209,7 @@ person2.getFullName(); // “Nome2 Sobrenome2"
 
 <p>Tranquilo, né?</p>
 
-<h2>Conclusão</h2>
+<h2>Ufa&hellip;</h2>
 
 <p>Existem diversas formas de trabalhar com funções em javascript e vou me aprofundar em algumas durante a vida deste blog. Por hora, aprendemos como criar e chamar uma função das maneiras mais comuns (e simples) e vale lembrar a importância de avaliar como você vai organizar seu código, não tem uma forma “certa”.</p>
 ]]></content>
