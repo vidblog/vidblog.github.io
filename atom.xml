@@ -4,7 +4,7 @@
   <title><![CDATA[vid]]></title>
   <link href="http://vid.blog.br/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-10-15T01:44:10-03:00</updated>
+  <updated>2015-01-30T18:02:28-02:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -12,6 +12,108 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Backbone.js: Introdução Ao Framework]]></title>
+    <link href="http://vid.blog.br/javascript/backbone-dot-js-introducao-ao-framework/"/>
+    <updated>2015-01-30T17:48:53-02:00</updated>
+    <id>http://vid.blog.br/javascript/backbone-dot-js-introducao-ao-framework</id>
+    <content type="html"><![CDATA[<p>Sem muita mágica, o Backbone.js te ajuda a estruturar melhor seu javascript com conceitos de Models e Views. Além de ajudar a interagir com API’s (backend).<!--more--></p>
+
+<blockquote><p>With Backbone, you represent your data as Models, which can be created, validated, destroyed, and saved to the server. Whenever a UI action causes an attribute of a model to change, the model triggers a &ldquo;change&rdquo; event; all the Views that display the model&rsquo;s state can be notified of the change, so that they are able to respond accordingly, re-rendering themselves with the new information.
+(<a href="http://backbonejs.org/">Ref</a>)</p></blockquote>
+
+<h2>Backbone.js</h2>
+
+<p>Normalmente, quando iniciamos uma aplicação ou grande parte fica no backend e o javascript fica responsável por adicionar um efeito ou outro no DOM (plugins de jQuery rs) ou, ainda, consumimos uma API e exibimos (tratamos) as informações no front-end (tudo com jQuery).  Hoje em dia, isso é cada vez mais criticado e técnicas para estruturar melhor o javascript são criadas constantemente (a maioria das vezes com base em conceitos de backend).</p>
+
+<p>É ai que o backbone.js entra, cada <em>View</em> é responsável por sua &ldquo;área&rdquo; dentro do site, evitando aqueles seletores jQuery espalhados pela aplicação toda.</p>
+
+<h3>Partiu codar</h3>
+
+<p>Para começar a usar o backbonejs é bem simples. Para esse post precisamos de um html qualquer que tenha uma div (ou o que você quiser) com o id <code>#main</code> (só porque usei esse id para explicar a parte de Views) e, claro, do backbonejs (que tem dependência do <a href="http://underscorejs.org/">underscore</a>  >= 1.5.0 e jQuery).</p>
+
+<h2>Views</h2>
+
+<p>As Views são responsáveis por exibir informações recebidas do Model e fazer modificações no DOM. A ideia é que para cada “área” do site deve existir uma View responsável por alterar somente o que estiver dentro dessa “área”.</p>
+
+<h3>Backbone.View</h3>
+
+<div><script src='https://gist.github.com/0602bfc1c0d69126faf4.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  render: function() {
+    this.$el.html(&quot;&lt;p&gt;Backbone View :)&lt;/p&gt;&quot;);
+  }
+});
+
+var view = new View({el: &quot;#main&quot;});
+view.render(); // &lt;p&gt;Backbone View :)&lt;/p&gt;</code></pre></noscript></div>
+
+
+<p>O que esse código faz é imprimir na tela <code>&lt;p&gt;Backbone View :)&lt;/p&gt;</code>, onde <code>el</code> (<code>#main</code>) é a área que essa View cuida.</p>
+
+<h2>Models</h2>
+
+<p>É parte de representação de dados, que nos permite interagir com API’s, validando, excluindo e gravando dados.</p>
+
+<h3>Backbone.Model</h3>
+
+<div><script src='https://gist.github.com/00bac046d01286796003.js'></script>
+<noscript><pre><code>var Model = Backbone.Model.extend({});
+
+var model = new Model({
+  name: &quot;João&quot;,
+  age: 14
+});
+
+model.get(&quot;name&quot;); // &quot;João&quot;
+model.get(&quot;age&quot;); // 14
+
+model.set({name: &quot;Mario&quot;});
+model.get(&quot;name&quot;); // &quot;Mario&quot;</code></pre></noscript></div>
+
+
+<p>Está é a maneira mais simples de trabalhar com o Model, usando os métodos <code>get</code> e <code>set</code> para tratar as informações.</p>
+
+<p><em>Num próximo post vou focar mais em como trabalhar com Views e Models em conjunto.</em></p>
+
+<h2>Router &amp; History</h2>
+
+<p>Quando criamos uma aplicação baseada em javascript, perdemos o histórico de ações e navegação que ocorre no browser. Por exemplo, se você tratar via javascript um link que exibe algum conteúdo na tela, você pode perceber que não existe uma maneira de chegar até essa parte da aplicação através de uma url.</p>
+
+<h3>Backbone.Router</h3>
+
+<p>Com a parte de rotas do backbone, podemos basear nossa aplicação por url’s.</p>
+
+<div><script src='https://gist.github.com/d2d0e12c75ffcc5b2ab3.js'></script>
+<noscript><pre><code>var Router = Backbone.Router.extend({
+  routes: {
+    &quot;home&quot;: &quot;home&quot;
+  },
+
+  home: function() {
+    new View({el: &quot;#main&quot;}).render(); // Inicia a View e chama o metodo render.
+  }
+});
+
+var router = new Router();</code></pre></noscript></div>
+
+
+<p>Nesse exemplo, definimos um Router e passamos uma rota <code>home</code> <br /> (ex: <a href="http://endereco/#home">http://endereco/#home</a>) através do objeto <code>routes</code> onde a chave é o caminho e o valor é a função que será invocada quando essa rota for acessada.</p>
+
+<p>Para iniciar as rotas, precisamos chamar a função <code>start</code> do <code>Backbone.History:</code>Backbone.history.start({root: “home&#8221;})` (A opção root define qual rota será a primeira a ser chamada).</p>
+
+<p>E para navegar até uma rota via código temos o método <br /> <code>navigate</code>: <code>router.navigate(“home”, {trigger: true})</code>, onde o primeiro argumento é a rota que você deseja ir e o segundo são options. <br /> A option <code>trigger: true</code> faz o update da url no navegador.</p>
+
+<p>Isso é bem o básico sobre as rotas no backbone. Podemos,  por exemplo, passar uma opção (<code>{pushState: true}</code>) para o <code>Backbone.history.start</code> que remove o <code>#</code>  das url’s habilitando a API de History do HTML5 (que fica muito melhor).</p>
+
+<h2>Collections e outras coisas&hellip;</h2>
+
+<p>Existe muuuita coisa legal no backbone que eu não cheguei nem perto de explicar. Esse post é apenas uma introdução (bem) básica de como podemos começar a usar a estrutura do backbone sem medo.</p>
+
+<p><em>Collections, Models, Views, Router… pretendo criar posts para cada uma dessas partes.</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Javascript Functions: Boas Práticas E Funções Construtoras]]></title>
@@ -282,9 +384,10 @@ Criar um tema no octopress é relativamente simples, mas é claro, se você quis
 
 <h2>EMD Theme</h2>
 
-<p><figure>
-<img src="http://vid.blog.br/images/posts/emd-theme-preview.png" alt="EMD Theme Screenshot" />
-</figure></p>
+<figure>
+<img src="http://vid.blog.br/images/posts/emd-theme-preview.png" />
+</figure>
+
 
 <p>EMD Theme é o nome que dei ao tema do blog, o design é inspirado no <a href="http://medium.com">Medium</a> e os <a href="https://github.com/vidblog/emd-theme-layout">PDS’s estão em um repositório separado</a>.</p>
 

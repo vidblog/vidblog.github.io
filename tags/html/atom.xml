@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos sobre: html | vid]]></title>
   <link href="http://vid.blog.br/tags/html/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2014-10-15T01:44:10-03:00</updated>
+  <updated>2015-01-30T18:02:28-02:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -41,7 +41,7 @@ Criar um tema no octopress é relativamente simples, mas é claro, se você quis
 <h2>EMD Theme</h2>
 
 <p><figure>
-<img src="/images/posts/emd-theme-preview.png" alt="EMD Theme Screenshot" />
+<img src="/images/posts/emd-theme-preview.png" />
 </figure></p>
 
 <p>EMD Theme é o nome que dei ao tema do blog, o design é inspirado no <a href="http://medium.com">Medium</a> e os <a href="https://github.com/vidblog/emd-theme-layout">PDS’s estão em um repositório separado</a>.</p>
