@@ -33,7 +33,7 @@ Simples, né?
 ## EMD Theme
 
 <figure>
-![EMD Theme Screenshot]({{ root_url }}/images/posts/emd-theme-preview.png)
+<img src="{{ root_url }}/images/posts/emd-theme-preview.png" />
 </figure>
 
 EMD Theme é o nome que dei ao tema do blog, o design é inspirado no [Medium](http://medium.com) e os [PDS’s estão em um repositório separado](https://github.com/vidblog/emd-theme-layout).

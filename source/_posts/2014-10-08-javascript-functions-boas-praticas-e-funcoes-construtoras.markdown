@@ -12,7 +12,6 @@ Criar uma função é muito fácil, é só aprender a sintaxe básica e mandar b
 
 > Generally speaking, a function is a "subprogram" that can be called by code external (or internal in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the function body. Values can be passed to a function, and the function can return a value. ([Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions))
 
-
 ## Criando UMA função:
 
 O primeiro ponto que procuro pensar é em criar funções que façam uma única coisa.
