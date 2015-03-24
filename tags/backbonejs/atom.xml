@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos sobre: backbonejs | vid]]></title>
   <link href="http://vid.blog.br/tags/backbonejs/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2015-01-30T18:02:28-02:00</updated>
+  <updated>2015-03-24T18:08:22-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Backbone.js: Views]]></title>
+    <link href="http://vid.blog.br/javascript/backbone-dot-js-views/"/>
+    <updated>2015-03-24T17:39:44-03:00</updated>
+    <id>http://vid.blog.br/javascript/backbone-dot-js-views</id>
+    <content type="html"><![CDATA[<p>Evitar código &ldquo;macarrão&rdquo;, separar responsabilidades, tratar eventos e atualizar dados vindo do model.<!--more--></p>
+
+<h1>Backbone.View</h1>
+
+<p>No <a href="/javascript/backbone-dot-js-introducao-ao-framework/">primeiro post sobre backbone que eu fiz aqui</a>, falei do básico do básico e não cheguei nem perto de explicar o que a parte de Views pode fazer por você. Agora vamos entrar a fundo nas Views e deixar nosso código <em>lindo de organizado</em> e com fácil entendimento.</p>
+
+<p>Então já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas <code>options</code> que ela aceita:</p>
+
+<p><div><script src='https://gist.github.com/5b1aac933c7fed18cab7.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  tagName: &amp;quot;ul&amp;quot;, // Por padrão é gerado uma div, mas podemos colocar outra tag (por exemplo uma &amp;lt;ul&amp;gt;)
+  className: &amp;quot;minha-ul&amp;quot;, // Podemos adicioanar uma class ao elemento da view (&amp;lt;ul class=&amp;#39;minha-ul&amp;#39;&amp;gt;&amp;lt;/ul&amp;gt;)
+  id: &amp;quot;minha-ul&amp;quot;, // Mesma coisa do className só que para adicionar um id (&amp;lt;ul id=&amp;#39;minha-ul&amp;#39;&amp;gt;&amp;lt;/ul&amp;gt;)
+  el: &amp;quot;#principal&amp;quot;, // Se o elemento já esta renderizado na página, podemos passar o el, assim ele não cria um elemento novo
+});</code></pre></noscript></div>
+</p>
+
+<h2>Render</h2>
+
+<p>O método <code>render</code> é basicamente a função que chamamos para renderizar o conteúdo dentro do <code>el</code>:</p>
+
+<p><div><script src='https://gist.github.com/6201b9d1d2d74c673dd0.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  render: function() {
+    this.$el.html(&quot;View exemplo&quot;);
+    return this;
+  }
+});</code></pre></noscript></div>
+</p>
+
+<p>Lembrando que cada view controla somente sua &ldquo;área&rdquo;, então dentro da <code>function</code> render nós sempre trabalhamos com o <code>this.el</code> que é o elemento que a View controla.</p>
+
+<p>Outra coisa legal é que existe um <code>this.$el</code> que &ldquo;herda&rdquo; as funções do jQuery (vamos usar ele).</p>
+
+<p>Para exibir a view agora é temos o retorno da <code>View</code> já com o conteúdo, ou seja, nosso <code>View.el</code> já esta pronto para ser jogado no DOM:</p>
+
+<p><div><script src='https://gist.github.com/27f8c4f81b4664b34370.js'></script>
+<noscript><pre><code>// View = gist 6201b9d1d2d74c673dd0
+var view = new View();
+
+view.render(); // Adicionando o conteúdo na view
+$(&quot;div&quot;).html(view.el); // Adiciona a view no DOM</code></pre></noscript></div>
+</p>
+
+<h2>Templates</h2>
+
+<p>Podemos definir um template para a view ao invés de deixar tudo dentro do método <code>render</code>:</p>
+
+<p><div><script src='https://gist.github.com/45c2c0f1d8afd549a660.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  template: _.template(&quot;&lt;h1&gt; Título da View &lt;/h1&gt;&quot;),
+  
+  render: function() {
+    this.$el.html(this.template());
+    return this;
+  }
+});</code></pre></noscript></div>
+</p>
+
+<p>É usado o <code>_.template</code> do <a href="http://underscorejs.org/#template">underscore.js</a> para gerar o template.</p>
+
+<h2>Events</h2>
+
+<p>A parte de events do backbone.js nós permite controlar eventos do DOM e delega-los para alguma função dentro do escopo da <code>View</code>.</p>
+
+<p><div><script src='https://gist.github.com/81825fe2f8db21933e76.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  events: {
+    &quot;click .item&quot;: &quot;clicked&quot;
+  },
+  
+  clicked: function() {
+    console.log(&quot;Item clicado&quot;);
+  }
+});</code></pre></noscript></div>
+</p>
+
+<p>O objeto events funciona assim:
+A <code>key</code> tem o evento seguido do seletor (quando o event é para o <code>el</code> não precisa passar o seletor): Ex. <code>”click .item”</code>.
+O <code>value</code> é a função que será chamada quando ocorrer o tal evento: Ex. <code>"clicked"</code>.</p>
+
+<p><a href="http://backbonejs.org/#Events-catalog">Na doc do backbone.js tem uma lista com os eventos que ele ouve.</a></p>
+
+<h1>Trabalhando com dados do model</h1>
+
+<p>Até agora não colocamos nenhuma informação dinâmica na renderização da View, vamos fazer isso agora.</p>
+
+<p>Vamos usar o mesmo esquema do template, só que com algumas alterações no método <code>render</code> e no próprio template (para receber as informações):</p>
+
+<p><div><script src='https://gist.github.com/d42ed9195b5ba35561f1.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  template: _.template(&quot;&lt;h1&gt; &lt;%= title %&gt; &lt;/h1&gt;&quot;),
+  
+  render: function() {
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  }
+});
+
+var view = new View({
+  model: new Backbone.Model({ title: &quot;Título da view&quot; }) // Passando o título pelo model
+});
+
+view.render(); // Adiciona o conteúdo da view
+
+console.log(view.el) // Retorna: &lt;h1&gt; Título da view &lt;/h1&gt;
+</code></pre></noscript></div>
+</p>
+
+<p>Simples né?</p>
+
+<h1>E&hellip;</h1>
+
+<p>Tem bastante coisa legal ainda, como <code>attributes</code> defaults para caso a view não receba as variáveis que o template espera, eventos entre views, etc&hellip;</p>
+
+<p>A parte de atualizar, adicionar e remover dados vou deixar para o próximo post: <code>Models &amp; Views</code>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Backbone.js: Introdução ao framework]]></title>

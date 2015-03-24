@@ -1,0 +1,363 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+  
+
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=860">
+
+  <meta name="author" content="Enrique Marques Jr" />
+  <link rel="publisher" href="https://plus.google.com/+EnriqueMarquesJunior" />
+  <meta property="og:title" content="Backbone.js: Views - vid" />
+  <meta property="og:site_name" content="vid" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt-BR" />
+  <meta name="description" content="Backbone.js: Views Mar 24th, 2015 5:39 pm, javascript ( backbonejs, javascript ) Evitar código &ldquo;macarrão&rdquo;, separar responsabilidades, &hellip;" />
+  <meta property="og:description" content="Backbone.js: Views Mar 24th, 2015 5:39 pm, javascript ( backbonejs, javascript ) Evitar código &ldquo;macarrão&rdquo;, separar responsabilidades, tratar eventos e atualizar dados vindo do model. Backbone.View No primeiro post sobre backbone que eu fiz aqui, falei do básico do básico e não cheguei nem perto de explicar o que a parte de Views pode fazer por você. Agora vamos entrar a fundo nas &hellip;" />
+  <meta property="og:url" content="http://vid.blog.br/javascript/backbone-dot-js-views/" />
+  <meta property="og:image" content="http://vid.blog.br/images/logo.png" />
+
+  <meta property="article:author" content="https://www.facebook.com/enriquesaid" />
+  <meta property="article:publisher" content="https://www.facebook.com/enriquesaid" />
+
+  
+
+  <title>Backbone.js: Views - vid</title>
+
+  <link rel="canonical" href="http://vid.blog.br/javascript/backbone-dot-js-views">
+
+  <link href="  /favicon.ico" rel="icon">
+  <link href="http://fonts.googleapis.com/css?family=Crete+Round:400" rel="stylesheet" type="text/css">
+  <link href="  /stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="vid" type="application/atom+xml">
+</head>
+
+  <body  id="post" >
+    <div class="cover-image"></div>
+
+<header id="header" role="banner" class="internal-page">
+  <div class="content">
+    <h1><a href="  /">vid</a></h1>
+    
+  </div>
+</header>
+
+    <main role="main">
+      <div class="content">
+  <article role="article">
+    
+  <header>
+    <h1>
+    
+      
+        Backbone.js: Views
+      
+    
+    </h1>
+
+    
+      
+
+
+
+
+
+      <span class="meta">
+        <time class='entry-date' datetime='2015-03-24T17:39:44-03:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>5:39 pm</span></time>,
+        
+
+  <span class="categories">
+    
+      <a class='category' href='  /./javascript/'>javascript</a>
+    
+  </span>
+
+
+        
+
+  <span class="tags">
+    (
+      <a class='tag' href='  /tags/backbonejs/'>backbonejs</a>, <a class='tag' href='  /tags/javascript/'>javascript</a>
+    )
+  </span>
+
+
+      </span>
+    
+  </header>
+
+
+
+  <p>Evitar código &ldquo;macarrão&rdquo;, separar responsabilidades, tratar eventos e atualizar dados vindo do model.<!--more--></p>
+
+<h1>Backbone.View</h1>
+
+<p>No <a href="  /javascript/backbone-dot-js-introducao-ao-framework/">primeiro post sobre backbone que eu fiz aqui</a>, falei do básico do básico e não cheguei nem perto de explicar o que a parte de Views pode fazer por você. Agora vamos entrar a fundo nas Views e deixar nosso código <em>lindo de organizado</em> e com fácil entendimento.</p>
+
+<p>Então já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas <code>options</code> que ela aceita:</p>
+
+<div><script src='https://gist.github.com/5b1aac933c7fed18cab7.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  tagName: &amp;quot;ul&amp;quot;, // Por padrão é gerado uma div, mas podemos colocar outra tag (por exemplo uma &amp;lt;ul&amp;gt;)
+  className: &amp;quot;minha-ul&amp;quot;, // Podemos adicioanar uma class ao elemento da view (&amp;lt;ul class=&amp;#39;minha-ul&amp;#39;&amp;gt;&amp;lt;/ul&amp;gt;)
+  id: &amp;quot;minha-ul&amp;quot;, // Mesma coisa do className só que para adicionar um id (&amp;lt;ul id=&amp;#39;minha-ul&amp;#39;&amp;gt;&amp;lt;/ul&amp;gt;)
+  el: &amp;quot;#principal&amp;quot;, // Se o elemento já esta renderizado na página, podemos passar o el, assim ele não cria um elemento novo
+});</code></pre></noscript></div>
+
+
+<h2>Render</h2>
+
+<p>O método <code>render</code> é basicamente a função que chamamos para renderizar o conteúdo dentro do <code>el</code>:</p>
+
+<div><script src='https://gist.github.com/6201b9d1d2d74c673dd0.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  render: function() {
+    this.$el.html(&quot;View exemplo&quot;);
+    return this;
+  }
+});</code></pre></noscript></div>
+
+
+<p>Lembrando que cada view controla somente sua &ldquo;área&rdquo;, então dentro da <code>function</code> render nós sempre trabalhamos com o <code>this.el</code> que é o elemento que a View controla.</p>
+
+<p>Outra coisa legal é que existe um <code>this.$el</code> que &ldquo;herda&rdquo; as funções do jQuery (vamos usar ele).</p>
+
+<p>Para exibir a view agora é temos o retorno da <code>View</code> já com o conteúdo, ou seja, nosso <code>View.el</code> já esta pronto para ser jogado no DOM:</p>
+
+<div><script src='https://gist.github.com/27f8c4f81b4664b34370.js'></script>
+<noscript><pre><code>// View = gist 6201b9d1d2d74c673dd0
+var view = new View();
+
+view.render(); // Adicionando o conteúdo na view
+$(&quot;div&quot;).html(view.el); // Adiciona a view no DOM</code></pre></noscript></div>
+
+
+<h2>Templates</h2>
+
+<p>Podemos definir um template para a view ao invés de deixar tudo dentro do método <code>render</code>:</p>
+
+<div><script src='https://gist.github.com/45c2c0f1d8afd549a660.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  template: _.template(&quot;&lt;h1&gt; Título da View &lt;/h1&gt;&quot;),
+  
+  render: function() {
+    this.$el.html(this.template());
+    return this;
+  }
+});</code></pre></noscript></div>
+
+
+<p>É usado o <code>_.template</code> do <a href="http://underscorejs.org/#template">underscore.js</a> para gerar o template.</p>
+
+<h2>Events</h2>
+
+<p>A parte de events do backbone.js nós permite controlar eventos do DOM e delega-los para alguma função dentro do escopo da <code>View</code>.</p>
+
+<div><script src='https://gist.github.com/81825fe2f8db21933e76.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  events: {
+    &quot;click .item&quot;: &quot;clicked&quot;
+  },
+  
+  clicked: function() {
+    console.log(&quot;Item clicado&quot;);
+  }
+});</code></pre></noscript></div>
+
+
+<p>O objeto events funciona assim:
+A <code>key</code> tem o evento seguido do seletor (quando o event é para o <code>el</code> não precisa passar o seletor): Ex. <code>”click .item”</code>.
+O <code>value</code> é a função que será chamada quando ocorrer o tal evento: Ex. <code>"clicked"</code>.</p>
+
+<p><a href="http://backbonejs.org/#Events-catalog">Na doc do backbone.js tem uma lista com os eventos que ele ouve.</a></p>
+
+<h1>Trabalhando com dados do model</h1>
+
+<p>Até agora não colocamos nenhuma informação dinâmica na renderização da View, vamos fazer isso agora.</p>
+
+<p>Vamos usar o mesmo esquema do template, só que com algumas alterações no método <code>render</code> e no próprio template (para receber as informações):</p>
+
+<div><script src='https://gist.github.com/d42ed9195b5ba35561f1.js'></script>
+<noscript><pre><code>var View = Backbone.View.extend({
+  template: _.template(&quot;&lt;h1&gt; &lt;%= title %&gt; &lt;/h1&gt;&quot;),
+  
+  render: function() {
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  }
+});
+
+var view = new View({
+  model: new Backbone.Model({ title: &quot;Título da view&quot; }) // Passando o título pelo model
+});
+
+view.render(); // Adiciona o conteúdo da view
+
+console.log(view.el) // Retorna: &lt;h1&gt; Título da view &lt;/h1&gt;
+</code></pre></noscript></div>
+
+
+<p>Simples né?</p>
+
+<h1>E&hellip;</h1>
+
+<p>Tem bastante coisa legal ainda, como <code>attributes</code> defaults para caso a view não receba as variáveis que o template espera, eventos entre views, etc&hellip;</p>
+
+<p>A parte de atualizar, adicionar e remover dados vou deixar para o próximo post: <code>Models &amp; Views</code>.</p>
+
+
+
+    <footer>
+      
+        <div class="sharing">
+  
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/javascript/backbone-dot-js-views/" data-via="osaaid" data-counturl="http://vid.blog.br/javascript/backbone-dot-js-views/">Tweet</a>
+  
+
+  
+    <div class="fb-like" data-href="http://vid.blog.br/javascript/backbone-dot-js-views/" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div>
+  
+</div>
+
+      
+
+      <div class="about-author">
+  <img src="http://www.gravatar.com/avatar/4ba549ef8db80400725b785fba1443f5?s=135" width="135" height="135" alt="Enrique Marques Jr" />
+  <h3>Enrique Marques Jr</h3>
+  
+    <div class="author-description">Front-end Developer na GetNinjas</div>
+  
+  <ul class="social-links">
+    <li>
+      <a href="https://github.com/enriquesaid" target="_blank">
+        <i class="icon-github">GitHub</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/enriquesaid" target="_blank">
+        <i class="icon-facebook">Facebook</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/osaaid" target="_blank">
+        <i class="icon-twitter">Twitter</i>
+      </a>
+    </li>
+    <li>
+      <a href="  /atom.xml" target="_blank">
+        <i class="icon-feed">Feed</i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      
+        <h4>Leia também:</h4>
+        <div class="others-posts">
+          
+            <a class="prev-post" href="  /javascript/backbone-dot-js-introducao-ao-framework/" title="Post anterior: Backbone.js: Introdução ao framework">
+              Backbone.js: Introdução ao framework
+            </a>
+          
+          
+        </div>
+      
+    </footer>
+  </article>
+  
+  <section class="post-comments">
+    <header>
+      <h2>Comentários:</h2>
+    </header>
+    
+      <div id="disqus_thread"></div>
+    
+  </section>
+
+
+</div>
+
+    </main>
+    <footer id="footer" role="contentinfo">
+  <div class="content">
+    <p class="copyright">Copyright &copy; 2015 - Enrique Marques Jr</p>
+    <p class="powered-by">Powered by <a href="http://octopress.org">Octopress</a></p>
+  </div>
+</footer>
+
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55134632-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="  /javascripts/libs/jquery.min.js"><\/script>')</script>
+<script src="  /javascripts/application.js"></script>
+
+
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'vid-blog';
+      
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vid.blog.br/javascript/backbone-dot-js-views/';
+        var disqus_url = 'http://vid.blog.br/javascript/backbone-dot-js-views/';
+        var disqus_script = 'embed.js';
+      
+
+      (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+  </body>
+</html>
