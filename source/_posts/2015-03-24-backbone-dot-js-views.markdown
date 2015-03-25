@@ -15,21 +15,21 @@ Evitar código "macarrão", separar responsabilidades, tratar eventos e atualiza
 
 No [primeiro post sobre backbone que eu fiz aqui](/javascript/backbone-dot-js-introducao-ao-framework/), falei do básico do básico e não cheguei nem perto de explicar o que a parte de Views pode fazer por você. Agora vamos entrar a fundo nas Views e deixar nosso código *lindo de organizado* e com fácil entendimento.
 
-Então já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas `options` que ela aceita:
+Então, já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas `options` que ela aceita:
 
 {% gist 5b1aac933c7fed18cab7 %}
 
 ## Render
 
-O método `render` é basicamente a função que chamamos para renderizar o conteúdo dentro do `el`:
+O método `render` é, basicamente a função que chamamos para renderizar o conteúdo dentro do `el`:
 
 {% gist 6201b9d1d2d74c673dd0 %}
 
 Lembrando que cada view controla somente sua "área", então dentro da `function` render nós sempre trabalhamos com o `this.el` que é o elemento que a View controla.
 
-Outra coisa legal é que existe um `this.$el` que "herda" as funções do jQuery (vamos usar ele).
+Outra coisa legal é que existe um `this.$el` que "herda" as funções do jQuery (vamos usá-lo).
 
-Para exibir a view agora é temos o retorno da `View` já com o conteúdo, ou seja, nosso `View.el` já esta pronto para ser jogado no DOM:
+Para exibir a view temos o retorno do `el` já com o conteúdo, ou seja, nosso `View.el` já esta pronto para ser jogado no DOM:
 
 {% gist 27f8c4f81b4664b34370 %}
 
@@ -43,7 +43,7 @@ Podemos definir um template para a view ao invés de deixar tudo dentro do méto
 
 ## Events
 
-A parte de events do backbone.js nós permite controlar eventos do DOM e delega-los para alguma função dentro do escopo da `View`.
+A parte de events do backbone.js nos permite controlar eventos do DOM e delegá-los para alguma função dentro do escopo da `View`.
 
 {% gist 81825fe2f8db21933e76 %}
 
@@ -61,7 +61,7 @@ Vamos usar o mesmo esquema do template, só que com algumas alterações no mét
 
 {% gist d42ed9195b5ba35561f1 %}
 
-Simples né?
+Simples, né?
 
 # E...
 

@@ -19,7 +19,7 @@ Quando comecei a trabalhar com web logo criei um blog para postar tudo de novo q
 
 Hoje, minha ideia continua a mesma… postar coisas que descubro, compartilhar conhecimento e principalmente transformar isso em um meio de comunicação entre eu e pessoas que eu ainda não conheço. Existe muita gente que manda bem hoje em dia e meu objetivo é que esse conteúdo chegue tanto em pessoas que estão iniciando quanto em pessoas que tem conhecimento para debater os assuntos postados.
 
-## Porque?
+## Por que?
 Acredito que publicar conteúdo é uma das maneiras mais eficazes (e mais "prazerosas") de aprender. Em segundo, quero passar tudo que aprendi para o máximo de pessoas possíveis.
 
 ## Resumindo
