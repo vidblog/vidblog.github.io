@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos Da Categoria: Javascript | vid]]></title>
   <link href="http://vid.blog.br/./javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2015-03-24T18:14:28-03:00</updated>
+  <updated>2015-03-24T21:14:42-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -52,7 +52,7 @@
 
 <p>Outra coisa legal é que existe um <code>this.$el</code> que &ldquo;herda&rdquo; as funções do jQuery (vamos usar ele).</p>
 
-<p>Para exibir a view agora é temos o retorno da <code>View</code> já com o conteúdo, ou seja, nosso <code>View.el</code> já esta pronto para ser jogado no DOM:</p>
+<p>Para exibir a view temos o retorno do <code>el</code> já com o conteúdo, ou seja, nosso <code>View.el</code> já esta pronto para ser jogado no DOM:</p>
 
 <p><div><script src='https://gist.github.com/27f8c4f81b4664b34370.js'></script>
 <noscript><pre><code>// View = gist 6201b9d1d2d74c673dd0
