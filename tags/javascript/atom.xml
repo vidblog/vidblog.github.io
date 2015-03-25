@@ -4,7 +4,7 @@
   <title><![CDATA[Artigos sobre: javascript | vid]]></title>
   <link href="http://vid.blog.br/tags/javascript/atom.xml" rel="self"/>
   <link href="http://vid.blog.br/"/>
-  <updated>2015-03-24T21:14:42-03:00</updated>
+  <updated>2015-03-24T21:17:44-03:00</updated>
   <id>http://vid.blog.br/</id>
   <author>
     <name><![CDATA[Enrique Marques Jr]]></name>
@@ -24,7 +24,7 @@
 
 <p>No <a href="/javascript/backbone-dot-js-introducao-ao-framework/">primeiro post sobre backbone que eu fiz aqui</a>, falei do básico do básico e não cheguei nem perto de explicar o que a parte de Views pode fazer por você. Agora vamos entrar a fundo nas Views e deixar nosso código <em>lindo de organizado</em> e com fácil entendimento.</p>
 
-<p>Então já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas <code>options</code> que ela aceita:</p>
+<p>Então, já sabemos como instanciar uma Backbone.View, agora vamos ver um exemplo de algumas <code>options</code> que ela aceita:</p>
 
 <p><div><script src='https://gist.github.com/5b1aac933c7fed18cab7.js'></script>
 <noscript><pre><code>var View = Backbone.View.extend({
@@ -37,7 +37,7 @@
 
 <h2>Render</h2>
 
-<p>O método <code>render</code> é basicamente a função que chamamos para renderizar o conteúdo dentro do <code>el</code>:</p>
+<p>O método <code>render</code> é, basicamente a função que chamamos para renderizar o conteúdo dentro do <code>el</code>:</p>
 
 <p><div><script src='https://gist.github.com/6201b9d1d2d74c673dd0.js'></script>
 <noscript><pre><code>var View = Backbone.View.extend({
@@ -50,7 +50,7 @@
 
 <p>Lembrando que cada view controla somente sua &ldquo;área&rdquo;, então dentro da <code>function</code> render nós sempre trabalhamos com o <code>this.el</code> que é o elemento que a View controla.</p>
 
-<p>Outra coisa legal é que existe um <code>this.$el</code> que &ldquo;herda&rdquo; as funções do jQuery (vamos usar ele).</p>
+<p>Outra coisa legal é que existe um <code>this.$el</code> que &ldquo;herda&rdquo; as funções do jQuery (vamos usá-lo).</p>
 
 <p>Para exibir a view temos o retorno do <code>el</code> já com o conteúdo, ou seja, nosso <code>View.el</code> já esta pronto para ser jogado no DOM:</p>
 
@@ -81,7 +81,7 @@ $(&quot;div&quot;).html(view.el); // Adiciona a view no DOM</code></pre></noscri
 
 <h2>Events</h2>
 
-<p>A parte de events do backbone.js nós permite controlar eventos do DOM e delega-los para alguma função dentro do escopo da <code>View</code>.</p>
+<p>A parte de events do backbone.js nos permite controlar eventos do DOM e delegá-los para alguma função dentro do escopo da <code>View</code>.</p>
 
 <p><div><script src='https://gist.github.com/81825fe2f8db21933e76.js'></script>
 <noscript><pre><code>var View = Backbone.View.extend({
@@ -127,7 +127,7 @@ console.log(view.el) // Retorna: &lt;h1&gt; Título da view &lt;/h1&gt;
 </code></pre></noscript></div>
 </p>
 
-<p>Simples né?</p>
+<p>Simples, né?</p>
 
 <h1>E&hellip;</h1>
 
