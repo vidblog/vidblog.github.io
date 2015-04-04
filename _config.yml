@@ -6,11 +6,8 @@ url: http://vid.blog.br
 title: "vid"
 subtitle: Front-end e outras coisas...
 author: Enrique Marques Jr
-author_description: Front-end Developer na GetNinjas
-gravatar_hash: 4ba549ef8db80400725b785fba1443f5
 simple_search: https://www.google.com/search
 description: Front-end e outras coisas...
-logo: logo.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -65,12 +62,6 @@ titlecase: true       # Converts page and post titles to titlecase
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
-#
-category_title_prefix: "Artigos da categoria: "
-category_meta_description_prefix: "Artigos da categoria: "
-
-tag_title_prefix: "Artigos sobre: "
-tag_meta_description_prefix: "Artigos sobre: "
 
 # Github repositories
 github_user: enriquesaid
@@ -107,5 +98,20 @@ disqus_show_comment_count: true
 google_analytics_tracking_id: UA-55134632-1
 
 # Facebook Like
-facebook_user: enriquesaid
 facebook_like: true
+
+# ----------------------- #
+#   EMD Theme Configs     #
+# ----------------------- #
+
+author_description: Front-end Developer na GetNinjas
+gravatar_hash: 4ba549ef8db80400725b785fba1443f5
+logo: logo.png
+
+category_title_prefix: "Artigos da categoria: "
+category_meta_description_prefix: "Artigos da categoria: "
+
+tag_title_prefix: "Artigos sobre: "
+tag_meta_description_prefix: "Artigos sobre: "
+
+facebook_user: enriquesaid
