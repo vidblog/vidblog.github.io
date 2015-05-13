@@ -13,11 +13,11 @@ No dia 9 de maio rolou a 1ª Conferência CSS Brasil e vou transformar em posts 
 
 ## Pra que testar CSS?
 
-Num projeto grande, com uma equipe grande e muita coisa rolando ao mesmo tempo, a chance de aparecer erros aumenta muito. Temos diversas praticas para minimizar erros e **testar o CSS nos permite garantir mais uma camada**.
+Num projeto grande, com uma equipe grande e muita coisa rolando ao mesmo tempo, a chance de aparecer erros aumenta muito. Temos diversas práticas para minimizar erros e **testar o CSS nos permite garantir mais uma camada**.
 
 ## Formas de testar seu CSS
 
-Existem varias formas de testar seu CSS, assim como vários tipos de testes:
+Existem várias formas de testar seu CSS, assim como vários tipos de testes:
 
 ### CSSLint
 
@@ -27,7 +27,7 @@ Existem varias formas de testar seu CSS, assim como vários tipos de testes:
 
 Acredito que seja o mais simples. O [CSSLint](http://csslint.net/) vai avaliar as linhas do seu código e te retornar uma lista de possíveis erros (assim como o JSLint).
 
-Podemos usar o CSSLint com algum task runner (grunt) e tornar esse teste bem pratico ([Informações sobre integração](https://github.com/CSSLint/csslint/wiki/Build-System-Integration)).
+Podemos usar o CSSLint com algum task runner (grunt) e tornar esse teste bem prático ([Informações sobre integração](https://github.com/CSSLint/csslint/wiki/Build-System-Integration)).
 
 ### Style Stats
 
@@ -35,13 +35,13 @@ Podemos usar o CSSLint com algum task runner (grunt) e tornar esse teste bem pra
   <img src="{{ root_url }}/images/posts/stylestats.png" />
 </figure>
 
-[Esse cara](http://www.stylestats.org/) é mais um feedback do seu CSS. Com ele temos um relatório sobre as regras do seu css, possibilitando visualizar de maneira pratica se o arquivo está muito complexo ou tem cores semelhantes que poderiam virar uma única, por exemplo.
+[Esse cara](http://www.stylestats.org/) é mais um feedback do seu CSS. Com ele temos um relatório sobre as regras do seu css, possibilitando visualizar de maneira prática se o arquivo está muito complexo ou tem cores semelhantes que poderiam virar uma única, por exemplo.
 
-*Também da pra integrar com o algum task runner.*
+*Também dá pra integrar com o algum task runner.*
 
 ## Testando Layouts
 
-Essa parte pra mim é a mais interessante, garantir de maneira prática que o layout não quebrou é sensacional.
+Essa parte, pra mim, é a mais interessante, garantir de maneira prática que o layout não quebrou é sensacional.
 
 Existem algumas ferramentas para te ajudar nessa tarefa, mas vou falar sobre uma: [BackstopJS](http://garris.github.io/BackstopJS/).
 
@@ -59,7 +59,7 @@ O que um teste de regressão faz é - basicamente - tirar prints do layout atual
 
 O BackstopJS disponibiliza uma interface bem legal, similar ao [mocha](http://mochajs.org/) ou [jasmine](http://jasmine.github.io/) que ja conhecemos. 
 
-Eu indico o mesmo [link que tem no slide](https://css-tricks.com/automating-css-regression-testing/). Não é tão simples mas esse link explica exatamente tudo que você precisa saber para começar a usar e testar seu CSS magicamente.
+Eu indico o mesmo [link que tem no slide](https://css-tricks.com/automating-css-regression-testing/). Não é tão simples, mas esse link explica exatamente tudo que você precisa saber para começar a usar e testar seu CSS magicamente.
 
 ## Quem deve criar os testes?
 
