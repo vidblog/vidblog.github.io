@@ -17,7 +17,7 @@ Num projeto grande, com uma equipe grande e muita coisa rolando ao mesmo tempo, 
 
 ## Formas de testar seu CSS
 
-Existe varias formas de testar seu CSS, assim como vários tipos de testes:
+Existem varias formas de testar seu CSS, assim como vários tipos de testes:
 
 ### CSSLint
 
