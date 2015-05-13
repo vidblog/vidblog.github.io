@@ -1,0 +1,305 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+  
+
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=860">
+
+  <meta name="author" content="Enrique Marques Jr" />
+  <link rel="publisher" href="https://plus.google.com/+EnriqueMarquesJunior" />
+  <meta property="og:title" content="Conferência CSS Brasil: Testando Seu CSS - vid" />
+  <meta property="og:site_name" content="vid" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt-BR" />
+  <meta name="description" content="Conferência CSS Brasil: Testando Seu CSS May 13th, 2015 3:23 pm, css ( css, testes ) No dia 9 de maio rolou a 1ª Conferência CSS Brasil e vou &hellip;" />
+  <meta property="og:description" content="Conferência CSS Brasil: Testando Seu CSS May 13th, 2015 3:23 pm, css ( css, testes ) No dia 9 de maio rolou a 1ª Conferência CSS Brasil e vou transformar em posts o que vi por lá! E o primeiro post será sobre a palestra do Eduardo Matos. (Slides) Pra que testar CSS? Num projeto grande, com uma equipe grande e muita coisa rolando ao mesmo tempo, a chance de aparecer erros aumenta muito. Temos &hellip;" />
+  <meta property="og:url" content="http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/" />
+  <meta property="og:image" content="http://vid.blog.br/images/logo.png" />
+
+  <meta property="article:author" content="https://www.facebook.com/enriquesaid" />
+  <meta property="article:publisher" content="https://www.facebook.com/enriquesaid" />
+
+  
+
+  <title>Conferência CSS Brasil: Testando Seu CSS - vid</title>
+
+  <link rel="canonical" href="http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css">
+
+  <link href="  /favicon.ico" rel="icon">
+  <link href="http://fonts.googleapis.com/css?family=Crete+Round:400" rel="stylesheet" type="text/css">
+  <link href="  /stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="vid" type="application/atom+xml">
+</head>
+
+  <body  id="post" >
+    <div class="cover-image"></div>
+
+<header id="header" role="banner" class="internal-page">
+  <div class="content">
+    <h1><a href="  /">vid</a></h1>
+    
+  </div>
+</header>
+
+    <main role="main">
+      <div class="content">
+  <article role="article">
+    
+  <header>
+    <h1>
+    
+      
+        Conferência CSS Brasil: Testando Seu CSS
+      
+    
+    </h1>
+
+    
+      
+
+
+
+
+
+      <span class="meta">
+        <time class='entry-date' datetime='2015-05-13T15:23:10-03:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:23 pm</span></time>,
+        
+
+  <span class="categories">
+    
+      <a class='category' href='  /./css/'>css</a>
+    
+  </span>
+
+
+        
+
+  <span class="tags">
+    (
+      <a class='tag' href='  /tags/css/'>css</a>, <a class='tag' href='  /tags/testes/'>testes</a>
+    )
+  </span>
+
+
+      </span>
+    
+  </header>
+
+
+
+  <p>No dia 9 de maio rolou a 1ª Conferência CSS Brasil e vou transformar em posts o que vi por lá! E o primeiro post será sobre a palestra do Eduardo Matos.<!--more--> (<a href="http://pt.slideshare.net/100000187316458/testes-de-css">Slides</a>)</p>
+
+<h2>Pra que testar CSS?</h2>
+
+<p>Num projeto grande, com uma equipe grande e muita coisa rolando ao mesmo tempo, a chance de aparecer erros aumenta muito. Temos diversas praticas para minimizar erros e <strong>testar o CSS nos permite garantir mais uma camada</strong>.</p>
+
+<h2>Formas de testar seu CSS</h2>
+
+<p>Existem varias formas de testar seu CSS, assim como vários tipos de testes:</p>
+
+<h3>CSSLint</h3>
+
+<figure>
+  <img src="  /images/posts/csslint.png" />
+</figure>
+
+
+<p>Acredito que seja o mais simples. O <a href="http://csslint.net/">CSSLint</a> vai avaliar as linhas do seu código e te retornar uma lista de possíveis erros (assim como o JSLint).</p>
+
+<p>Podemos usar o CSSLint com algum task runner (grunt) e tornar esse teste bem pratico (<a href="https://github.com/CSSLint/csslint/wiki/Build-System-Integration">Informações sobre integração</a>).</p>
+
+<h3>Style Stats</h3>
+
+<figure>
+  <img src="  /images/posts/stylestats.png" />
+</figure>
+
+
+<p><a href="http://www.stylestats.org/">Esse cara</a> é mais um feedback do seu CSS. Com ele temos um relatório sobre as regras do seu css, possibilitando visualizar de maneira pratica se o arquivo está muito complexo ou tem cores semelhantes que poderiam virar uma única, por exemplo.</p>
+
+<p><em>Também da pra integrar com o algum task runner.</em></p>
+
+<h2>Testando Layouts</h2>
+
+<p>Essa parte pra mim é a mais interessante, garantir de maneira prática que o layout não quebrou é sensacional.</p>
+
+<p>Existem algumas ferramentas para te ajudar nessa tarefa, mas vou falar sobre uma: <a href="http://garris.github.io/BackstopJS/">BackstopJS</a>.</p>
+
+<p>O BackstopJS faz um tipo de teste chamado de “teste de regressão”.</p>
+
+<h3>BackstopJS</h3>
+
+<figure>
+  <img src="  /images/posts/backstopjs.png" />
+</figure>
+
+
+<p>Minha ideia aqui não é fazer um tutorial e sim falar sobre as vantagens e desafios de implementar esse tipo de teste no projeto.</p>
+
+<p>O que um teste de regressão faz é - basicamente - tirar prints do layout atual para comparar com uma nova print (já com suas alterações) e caso tenha diferenças entre os prints os testes não vão passar.</p>
+
+<p>O BackstopJS disponibiliza uma interface bem legal, similar ao <a href="http://mochajs.org/">mocha</a> ou <a href="http://jasmine.github.io/">jasmine</a> que ja conhecemos.</p>
+
+<p>Eu indico o mesmo <a href="https://css-tricks.com/automating-css-regression-testing/">link que tem no slide</a>. Não é tão simples mas esse link explica exatamente tudo que você precisa saber para começar a usar e testar seu CSS magicamente.</p>
+
+<h2>Quem deve criar os testes?</h2>
+
+<p>Por mais que a parte do código fique na mão do front-end, o designer também precisa participar dessa camada (na minha opinião). Sua função seria analisar para evitar excessos e em alguns casos até corrigir testes.</p>
+
+
+
+    <footer>
+      
+        <div class="sharing">
+  
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/" data-via="osaaid" data-counturl="http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/">Tweet</a>
+  
+
+  
+    <div class="fb-like" data-href="http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div>
+  
+</div>
+
+      
+
+      <div class="about-author">
+  <img src="http://www.gravatar.com/avatar/4ba549ef8db80400725b785fba1443f5?s=135" width="135" height="135" alt="Enrique Marques Jr" />
+  <h3>Enrique Marques Jr</h3>
+  
+    <div class="author-description">Front-end Developer na GetNinjas</div>
+  
+  <ul class="social-links">
+    <li>
+      <a href="https://github.com/enriquesaid" target="_blank">
+        <i class="icon-github">GitHub</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/enriquesaid" target="_blank">
+        <i class="icon-facebook">Facebook</i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/osaaid" target="_blank">
+        <i class="icon-twitter">Twitter</i>
+      </a>
+    </li>
+    <li>
+      <a href="  /atom.xml" target="_blank">
+        <i class="icon-feed">Feed</i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      
+        <h4>Leia também:</h4>
+        <div class="others-posts">
+          
+            <a class="prev-post" href="  /javascript/backbone-dot-js-views/" title="Post anterior: Backbone.js: Views">
+              Backbone.js: Views
+            </a>
+          
+          
+        </div>
+      
+    </footer>
+  </article>
+  
+  <section class="post-comments">
+    <header>
+      <h2>Comentários:</h2>
+    </header>
+    
+      <div id="disqus_thread"></div>
+    
+  </section>
+
+
+</div>
+
+    </main>
+    <footer id="footer" role="contentinfo">
+  <div class="content">
+    <p class="copyright">Copyright &copy; 2015 - Enrique Marques Jr</p>
+    <p class="powered-by">Powered by <a href="http://octopress.org">Octopress</a></p>
+  </div>
+</footer>
+
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55134632-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="  /javascripts/libs/jquery.min.js"><\/script>')</script>
+<script src="  /javascripts/application.js"></script>
+
+
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'vid-blog';
+      
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/';
+        var disqus_url = 'http://vid.blog.br/css/conferencia-css-brasil-testando-seu-css/';
+        var disqus_script = 'embed.js';
+      
+
+      (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+  </body>
+</html>
