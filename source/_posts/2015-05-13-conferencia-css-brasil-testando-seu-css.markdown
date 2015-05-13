@@ -57,7 +57,7 @@ Minha ideia aqui não é fazer um tutorial e sim falar sobre as vantagens e desa
 
 O que um teste de regressão faz é - basicamente - tirar prints do layout atual para comparar com uma nova print (já com suas alterações) e caso tenha diferenças entre os prints os testes não vão passar.
 
-O BackstopJS disponibiliza uma interface bem legal, similar ao [mocha](http://mochajs.org/) ou [jasmine](http://jasmine.github.io/) que ja conhecemos. 
+O BackstopJS disponibiliza uma interface bem legal, similar ao [mocha](http://mochajs.org/) ou [jasmine](http://jasmine.github.io/) que já conhecemos.
 
 Eu indico o mesmo [link que tem no slide](https://css-tricks.com/automating-css-regression-testing/). Não é tão simples, mas esse link explica exatamente tudo que você precisa saber para começar a usar e testar seu CSS magicamente.
 
